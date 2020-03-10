@@ -60,9 +60,11 @@
     req.send();
     req.onload=function(){
 		
+		var currentArticle = 0;
+		
         json=JSON.parse(req.responseText);
-		document.getElementsByTagName("title")[0].innerHTML = json.articles[0].title;
-		document.getElementById("heading").innerHTML=json.articles[0].heading;
+		document.getElementsByTagName("title")[0].innerHTML = json.articles[currentArticle].title;
+		document.getElementById("heading").innerHTML=json.articles[currentArticle].heading;
 		document.getElementById("paragraph1").innerHTML=json.articles[currentArticle].paragraph1;
 			var imageSRC="";
 			imageSRC+=json.articles[currentArticle].image;
@@ -82,8 +84,6 @@
 					list+="</ul>"
 			document.getElementById("list").innerHTML=list;
     };
-      
-      
     
   });
 	
