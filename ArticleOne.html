@@ -56,9 +56,10 @@
 		
 		$.getJSON('articles.json', function(data){
 			var currentArticle = 0;
+			var stringTitle = "" ;
 
-			document.getElementById("title").innerHTML= data.articles[currentArticle].title;
-			document.getElementById("heading").innerHTML=data.articles[currentArticle].heading;
+			stringTitle+= data.articles[currentArticle].title;
+			/*document.getElementById("heading").innerHTML=data.articles[currentArticle].heading;
 			document.getElementById("paragraph1").innerHTML=data.articles[currentArticle].paragraph1;
 			var imageSRC="";
 			imageSRC+=data.articles[currentArticle].image;
@@ -76,9 +77,10 @@
 							list+="<li>"+data.articles[currentArticle].list[i]+"</li>";
 					}
 					list+="</ul>"
-			document.getElementById("list").innerHTML=list;
+			document.getElementById("list").innerHTML=list;*/
 		});
 		
+		document.getElementById("title").innerHTML=stringTitle;
 		
 	});
 		
