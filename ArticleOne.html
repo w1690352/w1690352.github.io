@@ -53,10 +53,11 @@
 <script>
 	
 	$(document).ready(function(){
+		var stringTitle = "error " ;
 		
 		$.getJSON('articles.json', function(data){
 			var currentArticle = 0;
-			var stringTitle = "" ;
+
 
 			stringTitle+= data.articles[currentArticle].title;
 			/*document.getElementById("heading").innerHTML=data.articles[currentArticle].heading;
