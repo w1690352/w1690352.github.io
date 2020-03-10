@@ -61,8 +61,7 @@
     req.onload=function(){
 		
         json=JSON.parse(req.responseText);
-        var data=JSON.stringify(json);  
-		document.getElementById("title").innerHTML = data;
+		document.getElementById("title").innerHTML = json.title;
     };
       
       
