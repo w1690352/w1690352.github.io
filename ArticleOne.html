@@ -54,29 +54,30 @@
 	
 	$(document).ready(function(){
 		
-		$.getJSON('w1690352.github.io/articles.json', function(data){
-		var currentArticle = 0;
-		
-		document.getElementById("title").innerHTML= data.articles[currentArticle].title;
-		document.getElementById("heading").innerHTML=data.articles[currentArticle].heading;
-		document.getElementById("paragraph1").innerHTML=data.articles[currentArticle].paragraph1;
-		var imageSRC="";
-		imageSRC+=data.articles[currentArticle].image;
-		var altText="";
-		altText += data.articles[currentArticle].alttext;
-		var myId="#Image1";
-		$(myId).attr('src', imageSRC);
-		$(myId).attr('alt', altText);
-			
-		document.getElementById("paragraph2").innerHTML=data.articles[currentArticle].paragraph2;
-		document.getElementById("paragraph3").innerHTML=data.articles[currentArticle].paragraph3;
-		
-		var list="<ul>"
-		for(var i in data.articles[currentArticle].list){
-						list+="<li>"+data.articles[currentArticle].list[i]+"</li>";
-				}
-				list+="</ul>"
-		document.getElementById("list").innerHTML=list;
+		$.getJSON("https://w1690352.github.io/articles.json", function(data){
+			var currentArticle = 0;
+
+
+			document.getElementById("title").innerHTML= data.articles[currentArticle].title;
+			document.getElementById("heading").innerHTML=data.articles[currentArticle].heading;
+			document.getElementById("paragraph1").innerHTML=data.articles[currentArticle].paragraph1;
+			var imageSRC="";
+			imageSRC+=data.articles[currentArticle].image;
+			var altText="";
+			altText += data.articles[currentArticle].alttext;
+			var myId="#Image1";
+			$(myId).attr('src', imageSRC);
+			$(myId).attr('alt', altText);
+
+			document.getElementById("paragraph2").innerHTML=data.articles[currentArticle].paragraph2;
+			document.getElementById("paragraph3").innerHTML=data.articles[currentArticle].paragraph3;
+
+			var list="<ul>"
+			for(var i in data.articles[currentArticle].list){
+							list+="<li>"+data.articles[currentArticle].list[i]+"</li>";
+					}
+					list+="</ul>"
+			document.getElementById("list").innerHTML=list;
 		});
 		
 		
