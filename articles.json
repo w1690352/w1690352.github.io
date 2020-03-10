@@ -1,5 +1,4 @@
 {
-    
             "id":"article1",
 			"numberInArray":0,
 			"title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -10,6 +9,5 @@
 			"paragraph2":"Nulla tortor nunc, posuere eu purus eget, ultricies ullamcorper sapien. Duis viverra lectus eget dolor gravida rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce molestie, odio at mattis auctor, mauris lectus luctus risus, eget pulvinar tortor erat a est..",
 			"paragraph3":"Mauris accumsan maximus enim, eleifend consectetur turpis molestie malesuada. Proin vulputate dui non mattis venenatis. Nam ornare sapien eget nibh placerat, faucibus dapibus lacus consectetur.",
 			"list":["Vestibulum viverra viverra ullamcorper", "Aenean ut felis hendrerit, scelerisque est sed, rhoncus sem"]
-        
-		
-}// JSON Document
+
+}
