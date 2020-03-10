@@ -54,7 +54,7 @@
 	
 	$(document).ready(function(){
 		
-		$.getJSONAarry('articles.json', function(data){
+		$.getJSON('articles.json', function(data){
 			var currentArticle = 0;
 
 			document.getElementById("title").innerHTML= data.articles[currentArticle].title;
