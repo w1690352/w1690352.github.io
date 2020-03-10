@@ -1,0 +1,72 @@
+{"articles": [
+        {
+            "id":"article1",
+			"numberInArray":0,
+			"title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "paragraph1":"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.",
+            "image":"https://picsum.photos/640/420/?random",
+			"altText":"Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel",
+			"paragraph2":"Nulla tortor nunc, posuere eu purus eget, ultricies ullamcorper sapien. Duis viverra lectus eget dolor gravida rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce molestie, odio at mattis auctor, mauris lectus luctus risus, eget pulvinar tortor erat a est..",
+			"paragraph3":"Mauris accumsan maximus enim, eleifend consectetur turpis molestie malesuada. Proin vulputate dui non mattis venenatis. Nam ornare sapien eget nibh placerat, faucibus dapibus lacus consectetur.",
+			"list":["Vestibulum viverra viverra ullamcorper", "Aenean ut felis hendrerit, scelerisque est sed, rhoncus sem"]
+        },
+		{
+            "id":"article2",
+			"numberInArray":1,
+			"title":"Praesent bibendum nec velit a fringilla. Nulla facilisi",
+            "heading":"Nam eu varius magna, vel molestie diam",
+            "paragraph1":"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.",
+            "image":"https://picsum.photos/640/420/?random",
+			"altText":"Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel",
+			"paragraph2":"Integer lobortis, magna et tempor facilisis, arcu dui finibus mauris, pellentesque fringilla massa sem non justo. Phasellus vel arcu eu eros commodo egestas at non dui. Ut ultricies quis nunc ut commodo",
+			"paragraph3":"Aenean justo urna, tempor vitae consectetur nec, ornare eget nunc. Duis ornare ipsum in quam auctor feugiat. Vestibulum sapien metus, rutrum et mattis ut, tincidunt in dolor. Praesent semper laoreet augue. Etiam lacinia hendrerit euismod.",
+			"paragraph4":"Integer lobortis, magna et tempor facilisis, arcu dui finibus mauris, pellentesque fringilla massa sem non justo. Phasellus vel arcu eu eros commodo egestas at non dui. Ut ultricies quis nunc ut commodo",
+			"paragraph5":"Aenean justo urna, tempor vitae consectetur nec, ornare eget nunc. Duis ornare ipsum in quam auctor feugiat. Vestibulum sapien metus, rutrum et mattis ut, tincidunt in dolor. Praesent semper laoreet augue. Etiam lacinia hendrerit euismod.",
+			"image2":"https://picsum.photos/640/420/?random",
+			"altText2":"Curabitur dictum leo bibendum lacus ultrices fringilla et quis justo",
+			"paragraph6":"Morbi venenatis aliquam cursus. Sed eros elit, consequat id faucibus vel, interdum fringilla massa.",
+			"image3":"https://picsum.photos/640/420/?random",
+			"altText3":"Curabitur dictum leo bibendum lacus ultrices fringilla et quis justo",
+			"paragraph7":"Morbi venenatis aliquam cursus. Sed eros elit, consequat id faucibus vel, interdum fringilla massa."
+        },
+		{
+            "id":"article3",
+			"numberInArray":2,
+			"title":"Vestibulum posuere orci ullamcorper nisi porta, sit amet tempus nibh porta",
+            "heading":"Donec est neque, vulputate vitae magna non, aliquam semper lectus",
+            "paragraph1":"Nam sed tempus lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales efficitur fermentum. Phasellus lacinia tempus odio, non mattis tellus pretium ac. Nulla facilisi. Donec tempor orci ipsum, eu euismod massa aliquet in. Fusce pretium lectus vitae dui pulvinar, vel fermentum elit porta.",
+			"paragraph2":"Donec iaculis volutpat consequat. Pellentesque et lobortis tellus. In mattis, diam a tempus fringilla, augue orci tincidunt nunc, et dictum lorem eros non ante.",
+			"paragraph3":"Donec iaculis volutpat consequat. Pellentesque et lobortis tellus. In mattis, diam a tempus fringilla, augue orci tincidunt nunc, et dictum lorem eros non ante.",
+			"paragraph4":"Cras dolor tellus, condimentum eu aliquet nec, facilisis a eros. Morbi sed tincidunt urna.",
+			"paragraph5":"Praesent feugiat rutrum lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+			"paragraph6":"Cras id condimentum dolor. Vestibulum risus leo, viverra a mi laoreet, vestibulum aliquam odio. Pellentesque aliquam placerat dolor vitae malesuada. Ut eget pretium tellus, cursus finibus ligula. Sed eros diam, porta sit amet urna eget, pretium dignissim magna. Curabitur imperdiet pharetra lectus ac venenatis.",
+			"paragraph7":"Donec at tincidunt mauris, id sagittis erat. Nunc mi nisi, pellentesque et rutrum quis, congue non elit. Nullam convallis sapien quis tellus imperdiet iaculis.",
+			"paragraph8":"Vivamus sollicitudin, diam non semper molestie, nisi nunc efficitur neque, id iaculis nibh ipsum sed quam. Etiam consequat tristique mi ac lacinia. Etiam leo nulla, faucibus et lobortis et, semper et quam. Cras vehicula quam non condimentum laoreet."
+        },
+		{
+            "id":"article4",
+			"numberInArray":3,
+			"title":"Maecenas venenatis lorem ut erat dictum, sed varius est porta",
+            "heading":"Maecenas venenatis lorem ut erat dictum, sed varius est porta",
+            "paragraph1":"Donec et fermentum elit, in aliquet massa. Suspendisse mollis tristique vulputate. Ut congue, quam quis volutpat egestas, nisl sem tempus urna, quis consequat arcu leo vitae turpis.",
+			"list":["Donec commodo ipsum id tellus cursus, vel fermentum elit venenatis", "Nullam pulvinar orci felis, eget maximus ex imperdiet accumsan" , "Nulla ut lectus at est fringilla pellentesque", "Duis elementum feugiat lacus non condimentum"],
+			"paragraph2":"Nunc auctor porttitor est, sed laoreet tortor mattis eget.",
+			"list2":["Etiam ultrices libero eget orci maximus luctus", "Sed at luctus diam, eget tincidunt arcu"],
+			"paragraph3":"Cras sodales odio et elit scelerisque, at aliquam elit facilisis. Suspendisse erat erat, egestas sed vehicula ac, finibus non velit. Curabitur fermentum iaculis velit eget semper."
+	
+        }, 
+		{
+            "id":"article5",
+			"numberInArray":4,
+			"title":"Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu",
+            "heading":"Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu",
+			"image":"https://picsum.photos/640/420/?random",
+			"altText":"Donec purus augue, lobortis et velit maximus, rutrum scelerisque ipsum",
+			"image2":"https://picsum.photos/640/420/?random",
+			"altText2":"Etiam at nisl diam",
+            "paragraph1":"Suspendisse id erat a nibh rutrum consectetur. Ut porttitor arcu id nibh pellentesque, et laoreet sapien accumsan. Phasellus quis finibus ipsum. Cras malesuada eu arcu sed laoreet. Nulla egestas ac eros vel eleifend. Nam porta ornare nisl, quis gravida dolor sagittis a."
+          
+        }
+]
+}// JSON Document
