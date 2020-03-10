@@ -54,7 +54,7 @@
 	
 	$(document).ready(function(){
 		
-		$.getJSON('https://w1690352.github.io/articles.json', function(articles){
+		$.getJSON('articles.json', function(articles){
 		var currentArticle = 0;
 		
 		document.getElementById("title").innerHTML= articles.articles[currentArticle].title;
