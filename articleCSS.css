@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/* 
+fonts:
+<link href="https://fonts.googleapis.com/css?family=Alatsi|Muli&display=swap" rel="stylesheet">
+	Titles: font-family: 'Alatsi', sans-serif;
+	Text: font-family: 'Muli', sans-serif;
+general colors:
+
+
+*/
+
+
+body{
+	font-family: 'Muli', sans-serif;
+	background-color: #050a26;
+	background-image: url("https://www.transparenttextures.com/patterns/mooning.png"); /* texture for background of page */
+}
+
+/*favourites*/
+
+#favourites{
+	position: fixed;
+	display: inline-block;
+	float:right;
+	width:22%;
+	margin-left: 76.5%;
+	background-color: #F2F4F3;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 50, 0.5);
+	margin-top: 20px;
+}
+
+#favouritesTitle{
+	color:darkblue;
+	padding-left: 5px;
+	text-decoration: underline;
+}
+
+.resortInFavs{
+	background-color: rgba(0,0,255,0.05);
+	padding-left: 5px;
+}
+
+.resortInFavs h3 a{
+	text-decoration: none;
+	color: black;
+}
+
+.resortInFavs h3 :hover:not(.heartInFavListBTN){
+	text-decoration: underline;
+}
+
+
+.heartInFavListBTN{
+	height:30px;
+	width:32px;
+	font-size:18px;
+	border-radius: 10px;
+	color: rgba(0,0,139,0.70);
+}
+
+.heartInFavListBTN::after{
+	content: "\002764";
+}
+
+.heartInFavListBTN:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.heartInFavListBTN:hover::after{
+	font-size:18px;
+	content: "\00D7"
+}
+
+.favListBTNS{
+	display: inline-block;
+	border-radius: 5px;
+	height: 50px;
+	font-family: 'Muli', sans-serif;
+	font-size: 100%;
+	background-color: rgba(0,0,139,0.70);
+	color: white;
+	width: 95px;
+	padding-left: 5px;
+	cursor: pointer;
+	letter-spacing: 0.5px;
+}
+
+
+#clearFavs::after{
+		content: "Clear Favourites"
+	}
+
+#viewFavs::after{
+		content: "View Favourites"
+	}
+
+#favListBTNDIV{
+	margin-left:20%;
+}
+
+
+#all{
+	background-color: #F2F4F3;
+	width: 60%;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 139, 0.5);
+	margin:20px;
+}
+
+/*HEADER*/
+
+#topSection{
+	background-color: #F2F4F3;
+	padding: 25px;
+	border-radius: 20px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 139, 0.2);
+}
+
+.text {
+	
+	padding-left:25px;
+	padding-bottom: 20px;
+}
+
+#firstPara{
+	padding-top: 20px;
+}
+
+h1{
+	font-family: 'Alatsi', sans-serif;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0px;
+	font-size: 36px;
+	text-shadow: -2px 2px 3px rgba(0,0,139,0.2);
+
+}
+
+.favBTN{
+	color: white;
+	font-size: 20px;
+	border-radius: 20px;
+	background-color:rgba(0,0,139,0.70);
+	padding:15px;
+	display: block;
+	float: right;
+}
+
+.favBTN:hover{
+	cursor: pointer;
+}
+
+#favBTNActive{
+	color: aqua !important;
+
+}
+
+.favBTNActive:hover{
+	cursor: pointer;
+}
+
+
+
+.paragraph{
+	margin:0;
+	padding:0;
+}
+
+
+
+#heading{
+	margin-top: 0px;
+	display: inline-block;
+	border-radius: 5px;
+	background-color:rgba(0,0,255,0.05);
+	padding: 2px;
+	margin-left: 10px;
+}
+
+/*Image Gallery*/
+
+.images{
+	height:100%;
+	padding:25px;
+	background-color: #F2F4F3;
+	border-radius: 0px 0px 20px 20px;
+	margin-top: 20px;
+}
+
+.biggerIMG img{
+	height:420px;
+	width:640px;
+	margin-left: 10%;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px grey;
+}
+
+
+
+.container{
+	margin-top: -20px;
+	padding: 15px;
+	background-color: #F2F4F3;
+	border-radius: 0px 0px 20px 20px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 139, 0.2);
+}
+
+#long_description{
+	padding: 30px;
+}
+
+#accommodations ul , #activities ul{
+	list-style-type: circle;
+}
+
+.mapouter{
+	margin-left: 25px;
+}
+
+.gmap_canvas{
+	position:relative;
+	display:block;
+	width: 95%;
+	height: 100%;
+}
+
+/*MAIN PAGE*/
+h1 a{
+	font-family: 'Alatsi', sans-serif;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0px;
+	text-decoration: none;
+	color: black;
+}
+
+h1 a:hover{
+	text-decoration: underline;
+}
+
+
+/*FOOTER*/
+footer{
+	width:430px;
+	color: white;
+	margin-left: 35%;
+
+}
+
+footer a{
+	text-decoration: none;
+	color: white;
+}
+
+
+/*CSS Pseudo-elements*/
+footer a::before{
+	content: "\2709";
+	font-size: 24px;
+	padding: 3px;
+}
+
+/*CSS Pseudo-elements*/
+footer telephone::before{
+	content: "\260F";
+	font-size: 24px;
+	padding: 3px;
+}
+
+
+}
