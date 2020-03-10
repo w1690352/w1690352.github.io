@@ -54,11 +54,26 @@
 	
 	$(document).ready(function(){
 		
-		var data = $.getJSON("https://w1690352.github.io/articles.json", function(data){
-			
+      // Add your code below this line
+      req=new XMLHttpRequest();
+    req.open("GET",'https//w1690352.github.io/BBC1.json',true);
+    req.send();
+    req.onload=function(){
+		
+        json=JSON.parse(req.responseText);
+        document.getElementsById('title').innerHTML=JSON.stringify(json);          
+    };
+      
+      
+    
+  });
+</script>
 
+<script>
+		
+            //$.getJSON("articles.json", function(data){
 			
-			var currentArticle = 0;
+			/*var currentArticle = 0;
 
 
 			document.getElementById("title").innerHTML= data.articles[currentArticle].title;
@@ -80,11 +95,11 @@
 							list+="<li>"+data.articles[currentArticle].list[i]+"</li>";
 					}
 					list+="</ul>"
-			document.getElementById("list").innerHTML=list;
-		});
+			document.getElementById("list").innerHTML=list;*/
+		//});
 		
 		
-	});
+
 		
 </script>	
 		
