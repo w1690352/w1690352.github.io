@@ -352,7 +352,12 @@
 		
 		function getRating(){
 			var divOrder = $('#sortable').sortable("toArray");
-			alert(divOrder);
+			var orderDisply="";
+			for(i in divOrder){
+				//orderDisply+="<div id='resorstInfav'><h3>";
+				orderDisply+=divOrder[i]+ " ,";
+				//orderDisply+="</h3></div>";
+			}
 			$("#myRatingText").append(divOrder);
 		}
 
