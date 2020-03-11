@@ -301,15 +301,10 @@
 			
 				$("#all").empty();
 				var currentArticleToPrint=0;
-				currentArticleToPrint++;
-				printArticle(currentArticleToPrint);
-				while(currentArticleToPrint<4){
-					if (counter=1){
+				
+				while(currentArticleToPrint<5){
 					currentArticleToPrint++;
-					printArticle(currentArticleToPrint);}
-					if (counter=2){
-						currentArticleToPrint++;
-						printArticle(currentArticleToPrint);}
+					printArticle(currentArticleToPrint);
 					};
 			}
 		
@@ -341,9 +336,10 @@
 		}
 		
 		function appndToAll(output){
-			counter++;
+			
 			var localOutput = output;
 			$("#displayAll").append(localOutput);
+			alert("new")
 		}
 		
 		
