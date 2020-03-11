@@ -1,6 +1,6 @@
 {"articles": [
         {
-            "id":"article1",
+            "id":"Article-1",
 			"title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             "paragraph1":"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.",
@@ -11,7 +11,7 @@
 			"list":["Vestibulum viverra viverra ullamcorper", "Aenean ut felis hendrerit, scelerisque est sed, rhoncus sem"]
         },
 		{
-            "id":"article2",
+            "id":"Article-2",
 			"title":"Praesent bibendum nec velit a fringilla. Nulla facilisi",
             "heading":"Nam eu varius magna, vel molestie diam",
             "paragraph1":"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.",
@@ -29,7 +29,7 @@
 			"paragraph7":"Morbi venenatis aliquam cursus. Sed eros elit, consequat id faucibus vel, interdum fringilla massa."
         },
 		{
-            "id":"article3",
+            "id":"Article-3",
 			"title":"Vestibulum posuere orci ullamcorper nisi porta, sit amet tempus nibh porta",
             "heading":"Donec est neque, vulputate vitae magna non, aliquam semper lectus",
             "paragraph1":"Nam sed tempus lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales efficitur fermentum. Phasellus lacinia tempus odio, non mattis tellus pretium ac. Nulla facilisi. Donec tempor orci ipsum, eu euismod massa aliquet in. Fusce pretium lectus vitae dui pulvinar, vel fermentum elit porta.",
@@ -42,7 +42,7 @@
 			"paragraph8":"Vivamus sollicitudin, diam non semper molestie, nisi nunc efficitur neque, id iaculis nibh ipsum sed quam. Etiam consequat tristique mi ac lacinia. Etiam leo nulla, faucibus et lobortis et, semper et quam. Cras vehicula quam non condimentum laoreet."
         },
 		{
-            "id":"article4",
+            "id":"Article-4",
 			"title":"Maecenas venenatis lorem ut erat dictum, sed varius est porta",
             "heading":"Maecenas venenatis lorem ut erat dictum, sed varius est porta",
             "paragraph1":"Donec et fermentum elit, in aliquet massa. Suspendisse mollis tristique vulputate. Ut congue, quam quis volutpat egestas, nisl sem tempus urna, quis consequat arcu leo vitae turpis.",
@@ -53,7 +53,7 @@
 	
         }, 
 		{
-            "id":"article5",
+            "id":"Article-5",
 			"title":"Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu",
             "heading":"Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu",
 			"image":"https://picsum.photos/640/420/?random",
