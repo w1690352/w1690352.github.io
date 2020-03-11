@@ -332,11 +332,11 @@
 					output+="</div></div>"
 					sendOutput(output);
 				};
-			req.abort();
 		}
 		
 		function sendOutput(output){
-			$("#displayAll").append(output);
+			var outputNotdymaic = output;
+			$("#displayAll").append(outputNotdymaic);
 		}
 			
 		
