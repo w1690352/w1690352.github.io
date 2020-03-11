@@ -319,7 +319,7 @@
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
 							//output+="<li id='"+jsonNew.articles[currentArticleToPrint].id+"'>"
-							output+="<div class='smallArticleDiv' id='article_"+currentArticleToPrint+"'>";
+							output+="<div class='smallArticleDiv' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
 							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
 							{
@@ -349,8 +349,13 @@
 		}
 		
 		function getRating(){
-			var divOrder = $('#sortable').sortable("serialize");
-			$("#myRatingText").append(divOrder);
+			var divOrder = $('#sortable').sortable("toArray {attribute: 'id'}");
+			var order = "<ol>";
+			for (x in divOrder) {
+				order+= "<li>" + divOrder[x] + "</li>";
+			}
+			order+= "</ol>";
+			$("#myRatingText").append(order);
 		}
 
 		
