@@ -318,6 +318,9 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
+						output+="<div class='smallArticleDiv>";
+						output+="<h1 class='title'> All articles, drag to re-order </h1>";
+						output+="</div>";
 						output+="<ul id=sortable>"
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
