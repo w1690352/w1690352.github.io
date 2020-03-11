@@ -21,6 +21,7 @@
   </div>
 </div>
 <div id="all"> </div>
+<div id="displayAll"></div>
 <script>
 	
 	$(document).ready(function(){
@@ -317,7 +318,7 @@
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
 
-					$("#all").append(output);
+					$("#displayAll").append(output);
 				};
 		}
 		
