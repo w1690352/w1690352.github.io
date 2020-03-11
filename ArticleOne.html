@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link href="https://fonts.googleapis.com/css?family=Alatsi|Muli&display=swap" rel="stylesheet">
 <link href="articleCSS.css" rel="stylesheet" type="text/css">
-<title>Article 1</title>
+<title>Articles</title>
 </head>
 
 <body>
@@ -68,7 +68,7 @@
 				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
 				output+=" </div>";
 				output+=" <div class='images'>";	
-				output+=" <div class='biggerIMG> <img src='"+json.image+"' > </div>";
+				output+=" <div class='biggerIMG'> <img alt="+json.alttext+" src='"+json.image+"' id='Image1'> </div>";
 				output+=" </div>";
 				output+="  <div class='text'>";
 				output+="  <p id=paragraph2'  class='paragraph'>"+json.paragraph2+"</p>";
