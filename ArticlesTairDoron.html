@@ -315,7 +315,7 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						output+="<ol id=sortable>"
+						output+="<ul id=sortable>"
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
 							output+="<li id='"+jsonNew.articles[currentArticleToPrint].id+"'>"
@@ -333,7 +333,7 @@
 							output+="</div></div>"
 							output+="</li>"
 						}
-						output+="</ol>"
+						output+="</ul>"
 						$("#displayAll").append(output);
 						getSortableReady();
 				}
@@ -352,7 +352,6 @@
 		function getRating(){
 			var divOrder = $('#sortable').sortable("toArray");
 			alert(divOrder);
-
 			$("#myRatingText").append(divOrder);
 		}
 
