@@ -332,8 +332,13 @@
 					output+="<p class='price'>"+jsonNew.heading+"</p>";
 					output+="<p class='short_description'>"+jsonNew.paragraph1+"</p>";
 					output+="</div></div>"
-					$("#displayAll").append(output);
+					appndToAll(output);
 				};
+		}
+		
+		function appndToAll(output){
+			var localOutput = output;
+			$("#displayAll").append(localOutput);
 		}
 		
 		
