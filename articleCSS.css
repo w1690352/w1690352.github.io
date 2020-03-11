@@ -18,7 +18,7 @@ body{
 
 /*favourites*/
 
-#favourites{
+#BTNS{
 	position: fixed;
 	display: inline-block;
 	float:right;
@@ -30,7 +30,7 @@ body{
 	margin-top: 20px;
 }
 
-#favouritesTitle{
+#BTNStitle{
 	color:darkblue;
 	padding-left: 5px;
 	text-decoration: underline;
@@ -51,29 +51,8 @@ body{
 }
 
 
-.heartInFavListBTN{
-	height:30px;
-	width:32px;
-	font-size:18px;
-	border-radius: 10px;
-	color: rgba(0,0,139,0.70);
-}
 
-.heartInFavListBTN::after{
-	content: "\002764";
-}
-
-.heartInFavListBTN:hover{
-	cursor: pointer;
-	text-decoration: none;
-}
-
-.heartInFavListBTN:hover::after{
-	font-size:18px;
-	content: "\00D7"
-}
-
-.favListBTNS{
+.BTNS{
 	display: inline-block;
 	border-radius: 5px;
 	height: 50px;
@@ -96,7 +75,7 @@ body{
 		content: "Next Article"
 	}
 
-#favListBTNDIV{
+#BTNDIV{
 	margin-left:20%;
 }
 
@@ -208,25 +187,91 @@ h1{
 	box-shadow: 0px 5px 5px rgba(0, 0, 139, 0.2);
 }
 
-#long_description{
-	padding: 30px;
+
+/*****************************************found resorts***************************************/
+
+.visibleResort{
+	background-color: #F2F4F3;
+	width: 65%;
+	padding: 25px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 50, 0.5);
+	margin:20px;
+	display: grid;
+	margin-left: 3%;
+	position:inherit;
 }
 
-#accommodations ul , #activities ul{
-	list-style-type: circle;
+
+
+.mainPageIMG{
+	width:90%;
+	margin:5px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 50, 0.5);
+	
 }
 
-.mapouter{
-	margin-left: 25px;
+.mainPageIMGDIV{
+	display: inline-block;
+	float:left;
+	grid-column:1;
 }
 
-.gmap_canvas{
-	position:relative;
-	display:block;
-	width: 95%;
-	height: 100%;
+.textInVisible{
+	padding: 6px;
+	grid-column:2;
 }
 
+
+.favBTN{
+	color: white;
+	font-size: 20px;
+	border-radius: 20px;
+	background-color:rgba(0,0,139,0.70);
+	padding:15px;
+	display: block;
+	float: right;
+}
+
+.favBTN:hover{
+	cursor: pointer;
+	color: aqua
+}
+
+
+.destinationInVisible{
+	text-shadow: 0.5px 0.5px rgba(0,0,255,0.5);
+	margin:0;
+	padding:0;
+	text-decoration: underline;
+}
+
+.location{
+	margin-top: 0px;
+}
+
+.comfort{
+	display: inline-block;
+	margin-left:20px;
+	position: relative;
+	}
+
+.price{
+	margin-top: 0px;
+	display: block;
+	width:inherit;
+	color:darkblue;
+	}
+
+.short_description{
+	margin-top: 0px;
+	display: inline-block;
+	border-radius: 5px;
+	background-color:rgba(0,0,255,0.05);
+	padding: 2px;
+	
+}
 /*MAIN PAGE*/
 h1 a{
 	font-family: 'Alatsi', sans-serif;

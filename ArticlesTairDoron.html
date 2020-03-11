@@ -12,12 +12,12 @@
 </head>
 
 <body>
-<div id="favourites">
-  <h3 id="favouritesTitle">My Favourite Resorts:</h3>
+<div id="BTNS">
+  <h3 id="BTNStitle">Browse Articles</h3>
   <div id="myFaves"></div>
-  <div id="favListBTNDIV">
-    <button id="prevBTN" class="favListBTNS"></button>
-    <button id="nextBTN" class="favListBTNS"></button>
+  <div id="BTNDIV">
+    <button id="prevBTN" class="BTNS"></button>
+    <button id="nextBTN" class="BTNS"></button>
   </div>
 </div>
 <div id="all"> </div>
@@ -32,13 +32,7 @@
 			currentArticle++;
 			displayArticle(currentArticle);}
 			else{
-				$("#all").empty();
-				var output="";
-				output+=" <header>";
-				output+=" <div id='topSection'>";
-				output+=" <h1 id=heading'> DONE </h1>";
-				output+=" </div>";
-				$("#all").append(output);
+				displayAllArticles();
 			}
 		});
 		
@@ -298,6 +292,32 @@
 				
     		};
 		};
+		
+		function displayAllArticles(){
+			var currentArticleToPrint =1;
+		
+				$("#all").empty();
+				var nameOfJson = "article";
+				nameOfJson+=currentArticleToPrint;
+				nameOfJson+=".json"
+
+				req=new XMLHttpRequest();
+				req.open("GET",nameOfJson,true);
+				req.send();
+				req.onload=function()
+				{	
+					var output=""
+					output+="<div class='visibleResort "+json.id+"'>";
+					output+="<div class='mainPageIMGDIV'><img class='mainPageIMG' src='"+json.image+"'></div>";
+					output+="<div class='textInVisible'>"
+					output+="<h1 class='name'>"+json.title+"</h1>";
+					output+="<p class='price'>"+json.heading+"</p>";
+					output+="<p class='short_description'>"+json.paragraph1+"</p>";
+					output+="</div></div>"
+
+					$("#all").append(output);
+				};
+		}
 		
   });
 	
