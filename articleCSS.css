@@ -196,7 +196,7 @@ h1{
 	padding: 25px;
 	border-radius: 20px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 50, 0.5);
-	
+	margin:20px;
 	display: grid;
 	margin-left: 3%;
 	position:inherit;
