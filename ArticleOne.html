@@ -61,30 +61,33 @@
 		
 		function displayArticle1(){
 			
+			var nameOfJson = "'article";
+			nameOfJson+=currentArticle;
+			nameOfJson+=".json'"
 			
 			req=new XMLHttpRequest();
-    		req.open("GET",'articles.json',true);
+    		req.open("GET",nameOfJson,true);
     		req.send();
     		req.onload=function()
 			{
 				json=JSON.parse(req.responseText);
-				document.getElementsByTagName("title")[0].innerHTML = json.articles[currentArticle].title;
-				document.getElementById("heading").innerHTML=json.articles[currentArticle].heading;
-				document.getElementById("paragraph1").innerHTML=json.articles[currentArticle].paragraph1;
+				document.getElementsByTagName("title")[0].innerHTML = json.title;
+				document.getElementById("heading").innerHTML=json.heading;
+				document.getElementById("paragraph1").innerHTML=json.paragraph1;
 				var imageSRC="";
-				imageSRC+=json.articles[currentArticle].image;
+				imageSRC+=json.image;
 				var altText="";
-				altText += json.articles[currentArticle].alttext;
+				altText += json.alttext;
 				var myId="#Image1";
 				$(myId).attr('src', imageSRC);
 				$(myId).attr('alt', altText);
 
-				document.getElementById("paragraph2").innerHTML=json.articles[currentArticle].paragraph2;
-				document.getElementById("paragraph3").innerHTML=json.articles[currentArticle].paragraph3;
+				document.getElementById("paragraph2").innerHTML=json.paragraph2;
+				document.getElementById("paragraph3").innerHTML=json.paragraph3;
 
 				var list="<ul>"
-				for(var i in json.articles[currentArticle].list){
-								list+="<li>"+json.articles[currentArticle].list[i]+"</li>";
+				for(var i in json.list){
+								list+="<li>"+json.list[i]+"</li>";
 						}
 						list+="</ul>"
 				document.getElementById("list").innerHTML=list;
