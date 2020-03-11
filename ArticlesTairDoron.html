@@ -354,11 +354,11 @@
 			var divOrder = $('#sortable').sortable("toArray");
 			var orderDisply="";
 			for(i in divOrder){
-				//orderDisply+="<div id='resorstInfav'><h3>";
-				orderDisply+=divOrder[i]+ " ,";
-				//orderDisply+="</h3></div>";
+				orderDisply+="<div id='resorstInfav'><h3>";
+				orderDisply+=divOrder[i];
+				orderDisply+="</h3></div>";
 			}
-			$("#myRatingText").append(divOrder);
+			$("#myRatingText").append(orderDisply);
 		}
 
 		
