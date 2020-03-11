@@ -311,7 +311,7 @@
 				req.send();
 				req.onload=function()
 				{	
-					var output=""
+					var output="";
 					output+="<div class='visibleResort' id='"+json.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
 					output+="<img class='mainPageIMG' src='"+json.image+"?sig="+Math.random()+"'>";
@@ -325,6 +325,7 @@
 					$("#displayAll").append(output);
 				};
 			}
+			
 		
 			
 		}
