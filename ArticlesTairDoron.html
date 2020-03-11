@@ -297,13 +297,21 @@
 		};
 		
 		function displayAllArticles(){
-			var currentArticleToPrint =1;
 			
 				$("#all").empty();
 				var output="";
-			for (var currentArticleToPrint =1; currentArticleToPrint<5 ; currentArticleToPrint++){
+				for(var currentArticleToPrint =1; currentArticleToPrint<5 ; currentArticleToPrint++){
+						output+= printArticle(currentArticleToPrint);
+					};
+				$("#displayAll").append(output);
+			
 				
-				var nameOfJson = "article";
+				
+				
+			}
+		function printArticle(currentArticleToPrint){
+			
+			var nameOfJson = "article";
 				nameOfJson+=currentArticleToPrint;
 				nameOfJson+=".json"
 
@@ -312,7 +320,7 @@
 				req.send();
 				req.onload=function()
 				{	
-					
+					var output="";
 					output+="<div class='visibleResort' id='"+json.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
 					output+="<img class='mainPageIMG' src='"+json.image+"?sig="+Math.random()+"'>";
@@ -322,13 +330,9 @@
 					output+="<p class='price'>"+json.heading+"</p>";
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
-
-					
+					return output;
 				};
-				
-				
-			}
-			$("#displayAll").append(output);
+		}
 			
 		}
 		
