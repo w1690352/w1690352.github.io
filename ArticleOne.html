@@ -20,26 +20,11 @@
     <button id="nextBTN" class="favListBTNS"></button>
   </div>
 </div>
+	
 <div id="all">
-  <header>
-    <div id="topSection">
-      <h1 id="heading"></h1>
-    </div>
-  </header>
-  <div class="text" id="firstPara">
-    <p id="paragraph1" class="paragraph"></p>
-  </div>
-  <div class="images">
-    <div class="biggerIMG"> <img alt="Image1" src="#" id="Image1"> </div>
-  </div>
-  <div class="text">
-    <p id="paragraph2"  class="paragraph"></p>
-    <br>
-    <br>
-    <p id="paragraph3"  class="paragraph"></p>
-    <div id="list"></div>
-  </div>
+
 </div>
+	
 <script>
 	
 	$(document).ready(function(){
@@ -71,26 +56,33 @@
     		req.onload=function()
 			{
 				json=JSON.parse(req.responseText);
+	
 				document.getElementsByTagName("title")[0].innerHTML = json.title;
-				document.getElementById("heading").innerHTML=json.heading;
-				document.getElementById("paragraph1").innerHTML=json.paragraph1;
-				var imageSRC="";
-				imageSRC+=json.image;
-				var altText="";
-				altText += json.alttext;
-				var myId="#Image1";
-				$(myId).attr('src', imageSRC);
-				$(myId).attr('alt', altText);
-
-				document.getElementById("paragraph2").innerHTML=json.paragraph2;
-				document.getElementById("paragraph3").innerHTML=json.paragraph3;
-
+				var output="";
+				output+=" <header>";
+				output+=" <div id='topSection'>";
+				output+=" <h1 id=heading'>"+json.heading+"</h1>";
+				output+=" </div>";
+				output+=" </header>";
+				output+=" <div class='text' id='firstPara'>";
+				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
+				output+=" </div>";
+				output+=" <div class='images'>";	
+				output+=" <div class='biggerIMG> <img alt="+json.alttext+" src="+json.image+" id=Image1> </div>";
+				output+=" </div>";
+				output+="  <div class='text'>";
+				output+="  <p id=paragraph2'  class='paragraph'>"+json.paragraph2+"</p>";
+				output+=" <br><br>";
+				output+="  <p id=paragraph3'  class='paragraph'>"+json.paragraph3+"</p>";
 				var list="<ul>"
 				for(var i in json.list){
 								list+="<li>"+json.list[i]+"</li>";
 						}
 						list+="</ul>"
-				document.getElementById("list").innerHTML=list;
+				output+=" <div id='list'>"+list+"</div>";
+				
+				$("#all").append(output);
+				
     		};
 		}	
 		
