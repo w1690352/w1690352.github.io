@@ -325,15 +325,20 @@
 							output+="</div></div>"
 						}
 						$("#displayAll").append(output);
+						getSortableReady();
 				}
-				
-				$("#article1").sortable();
-				$("#article2").sortable();
-				$("#article3").sortable();
-				$("#article4").sortable();
-				$("#article5").sortable();
+
 		}
 		
+		
+		function getSortableReady(){
+			
+			$("#article1").sortable();
+			$("#article2").sortable();
+			$("#article3").sortable();
+			$("#article4").sortable();
+			$("#article5").sortable();
+		}
 
 		
 		
