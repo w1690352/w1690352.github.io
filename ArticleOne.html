@@ -17,8 +17,8 @@
 <h3 id="favouritesTitle">My Favourite Resorts:</h3>	
 <div id="myFaves"></div>
 <div id="favListBTNDIV">
-<button id="clearFavs" class="favListBTNS"></button>
-<button id="viewFavs" class="favListBTNS"></button>
+<button id="prevBTN" class="favListBTNS"></button>
+<button id="nextBTN" class="favListBTNS"></button>
 </div>
 </div>
 	
@@ -52,37 +52,53 @@
 	
 	$(document).ready(function(){
 		
-      // Add your code below this line
-      req=new XMLHttpRequest();
-    req.open("GET",'articles.json',true);
-    req.send();
-    req.onload=function(){
-		
 		var currentArticle = 0;
 		
-        json=JSON.parse(req.responseText);
-		document.getElementsByTagName("title")[0].innerHTML = json.articles[currentArticle].title;
-		document.getElementById("heading").innerHTML=json.articles[currentArticle].heading;
-		document.getElementById("paragraph1").innerHTML=json.articles[currentArticle].paragraph1;
-			var imageSRC="";
-			imageSRC+=json.articles[currentArticle].image;
-			var altText="";
-			altText += json.articles[currentArticle].alttext;
-			var myId="#Image1";
-			$(myId).attr('src', imageSRC);
-			$(myId).attr('alt', altText);
+		$("#nextBTN").click(function(){
+			currentArticle++;
+			displayArticle(currentArticle);
+		})
+		
+		
+		function displayArticle (int currentArticle){
+			
+			if (currentArticle = 1){
+				displayArticle1();
+			}
+		}
+		
+		function displayArticle1(){
+			
+			
+			req=new XMLHttpRequest();
+    		req.open("GET",'articles.json',true);
+    		req.send();
+    		req.onload=function()
+			{
+				json=JSON.parse(req.responseText);
+				document.getElementsByTagName("title")[0].innerHTML = json.articles[currentArticle].title;
+				document.getElementById("heading").innerHTML=json.articles[currentArticle].heading;
+				document.getElementById("paragraph1").innerHTML=json.articles[currentArticle].paragraph1;
+				var imageSRC="";
+				imageSRC+=json.articles[currentArticle].image;
+				var altText="";
+				altText += json.articles[currentArticle].alttext;
+				var myId="#Image1";
+				$(myId).attr('src', imageSRC);
+				$(myId).attr('alt', altText);
 
-			document.getElementById("paragraph2").innerHTML=json.articles[currentArticle].paragraph2;
-			document.getElementById("paragraph3").innerHTML=json.articles[currentArticle].paragraph3;
+				document.getElementById("paragraph2").innerHTML=json.articles[currentArticle].paragraph2;
+				document.getElementById("paragraph3").innerHTML=json.articles[currentArticle].paragraph3;
 
-			var list="<ul>"
-			for(var i in json.articles[currentArticle].list){
-							list+="<li>"+json.articles[currentArticle].list[i]+"</li>";
-					}
-					list+="</ul>"
-			document.getElementById("list").innerHTML=list;
-    };
-    
+				var list="<ul>"
+				for(var i in json.articles[currentArticle].list){
+								list+="<li>"+json.articles[currentArticle].list[i]+"</li>";
+						}
+						list+="</ul>"
+				document.getElementById("list").innerHTML=list;
+    		};
+		}	
+		
   });
 	
 	</script>

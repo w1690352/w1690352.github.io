@@ -88,12 +88,12 @@ body{
 }
 
 
-#clearFavs::after{
-		content: "Clear Favourites"
+#prevBTN::after{
+		content: "Previous Article"
 	}
 
-#viewFavs::after{
-		content: "View Favourites"
+#nextBTN::after{
+		content: "Next Article"
 	}
 
 #favListBTNDIV{
