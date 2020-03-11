@@ -320,6 +320,7 @@
 				req.send();
 				req.onload=function()
 				{	
+					json=JSON.parse(req.responseText);
 					var output="";
 					output+="<div class='visibleResort' id='"+json.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
@@ -335,8 +336,7 @@
 		}
 		
 		function sendOutput(output){
-			var outputNotdymaic = output;
-			$("#displayAll").append(outputNotdymaic);
+			$("#displayAll").append(output);
 		}
 			
 		
