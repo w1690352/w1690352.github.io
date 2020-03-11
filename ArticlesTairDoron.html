@@ -33,12 +33,14 @@
 			currentArticle++;
 			displayArticle(currentArticle);}
 			else{
-				displayAllArticles();
+				if(currentArticle==5){
+				currentArticle++;
+				displayAllArticles();}
 			}
 		});
 		
 		$("#prevBTN").click(function(){
-			if(currentArticle!=1 || currentArticle!=0){
+			if(currentArticle>1){
 			currentArticle--;
 			displayArticle(currentArticle);}
 		});
@@ -258,7 +260,7 @@
 		
 		function displayArticle5(){
 			$("#all").empty();
-			
+			$("#displayAll").empty();
 			
 			var nameOfJson = "article";
 			nameOfJson+=currentArticle;
