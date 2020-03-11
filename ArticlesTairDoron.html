@@ -298,7 +298,7 @@
 		
 		function displayAllArticles(){
 			var currentArticleToPrint =1;
-		
+			
 				$("#all").empty();
 				var nameOfJson = "article";
 				nameOfJson+=currentArticleToPrint;
@@ -312,7 +312,7 @@
 					var output=""
 					output+="<div class='visibleResort' id='"+json.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
-					output+="<img class='mainPageIMG' src='"+json.image+"'>";
+					output+="<img class='mainPageIMG' src='"+json.image+"?sig="+Math.random()+"'>";
 					output+="</div>";
 					output+="<div class='textInVisible'>"
 					output+="<h1 class='name'>"+json.title+"</h1>";
@@ -320,8 +320,36 @@
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
 
-					$("#displayAll").append(output);
+					
 				};
+			
+			
+				currentArticleToPrint =2;
+				var nameOfJson = "article";
+				nameOfJson+=currentArticleToPrint;
+				nameOfJson+=".json"
+
+				req=new XMLHttpRequest();
+				req.open("GET",nameOfJson,true);
+				req.send();
+				req.onload=function()
+				{	
+					
+					output+="<div class='visibleResort' id='"+json.id+"'>";
+					output+="<div class='mainPageIMGDIV'>"
+					output+="<img class='mainPageIMG' src='"+json.image+"?sig="+Math.random()+"'>";
+					output+="</div>";
+					output+="<div class='textInVisible'>"
+					output+="<h1 class='name'>"+json.title+"</h1>";
+					output+="<p class='price'>"+json.heading+"</p>";
+					output+="<p class='short_description'>"+json.paragraph1+"</p>";
+					output+="</div></div>"
+
+					
+				};
+			
+			
+			$("#displayAll").append(output);
 		}
 		
   });
