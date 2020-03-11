@@ -196,7 +196,7 @@ h1{
 	padding: 25px;
 	border-radius: 20px;
 	box-shadow: 5px 5px 5px rgba(0, 0, 50, 0.5);
-	margin:20px;
+	
 	display: grid;
 	margin-left: 3%;
 	position:inherit;
@@ -247,22 +247,6 @@ h1{
 	text-decoration: underline;
 }
 
-.location{
-	margin-top: 0px;
-}
-
-.comfort{
-	display: inline-block;
-	margin-left:20px;
-	position: relative;
-	}
-
-.price{
-	margin-top: 0px;
-	display: block;
-	width:inherit;
-	color:darkblue;
-	}
 
 .short_description{
 	margin-top: 0px;
@@ -272,6 +256,7 @@ h1{
 	padding: 2px;
 	
 }
+
 /*MAIN PAGE*/
 h1 a{
 	font-family: 'Alatsi', sans-serif;
