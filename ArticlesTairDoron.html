@@ -349,13 +349,10 @@
 		}
 		
 		function getRating(){
-			var divOrder = $('#sortable').sortable("toArray {attribute: 'id'}");
-			var order = "<ol>";
-			for (x in divOrder) {
-				order+= "<li>" + divOrder[x] + "</li>";
-			}
-			order+= "</ol>";
-			$("#myRatingText").append(order);
+			var divOrder = $('#sortable').sortable("toArray");
+			alert(divOrder);
+
+			$("#myRatingText").append(divOrder);
 		}
 
 		
