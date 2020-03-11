@@ -299,12 +299,14 @@
 		function displayAllArticles(){
 			
 				$("#all").empty();
-				
-				for(var currentArticleToPrint =1; currentArticleToPrint<6 ; currentArticleToPrint++){
+				var currentArticleToPrint=0;
+				var counter = 1;
+				while(currentArticleToPrint<6 ){
+						currentArticleToPrint++;
+						counter++;
+						$("#displayAll").append(counter);
 						printArticle(currentArticleToPrint);
 					};
-				
-					
 			}
 		
 		function printArticle(currentArticleToPrint){
@@ -335,7 +337,7 @@
 		}
 		
 		function sendOutput(output){
-			$("#displayAll").append(output)
+			$("#displayAll").append(output);
 		}
 			
 		
