@@ -1,15 +1,20 @@
 {
 
   "id": "article2",
-  "title": "Vestibulum posuere orci ullamcorper nisi porta, sit amet tempus nibh porta",
-  "heading": "Donec est neque, vulputate vitae magna non, aliquam semper lectus",
-  "paragraph1": "Nam sed tempus lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam sodales efficitur fermentum. Phasellus lacinia tempus odio, non mattis tellus pretium ac. Nulla facilisi. Donec tempor orci ipsum, eu euismod massa aliquet in. Fusce pretium lectus vitae dui pulvinar, vel fermentum elit porta.",
-  "paragraph2": "Donec iaculis volutpat consequat. Pellentesque et lobortis tellus. In mattis, diam a tempus fringilla, augue orci tincidunt nunc, et dictum lorem eros non ante.",
-  "paragraph3": "Donec iaculis volutpat consequat. Pellentesque et lobortis tellus. In mattis, diam a tempus fringilla, augue orci tincidunt nunc, et dictum lorem eros non ante.",
-  "paragraph4": "Cras dolor tellus, condimentum eu aliquet nec, facilisis a eros. Morbi sed tincidunt urna.",
-  "paragraph5": "Praesent feugiat rutrum lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-  "paragraph6": "Cras id condimentum dolor. Vestibulum risus leo, viverra a mi laoreet, vestibulum aliquam odio. Pellentesque aliquam placerat dolor vitae malesuada. Ut eget pretium tellus, cursus finibus ligula. Sed eros diam, porta sit amet urna eget, pretium dignissim magna. Curabitur imperdiet pharetra lectus ac venenatis.",
-  "paragraph7": "Donec at tincidunt mauris, id sagittis erat. Nunc mi nisi, pellentesque et rutrum quis, congue non elit. Nullam convallis sapien quis tellus imperdiet iaculis.",
-  "paragraph8": "Vivamus sollicitudin, diam non semper molestie, nisi nunc efficitur neque, id iaculis nibh ipsum sed quam. Etiam consequat tristique mi ac lacinia. Etiam leo nulla, faucibus et lobortis et, semper et quam. Cras vehicula quam non condimentum laoreet."
+  "title": "Praesent bibendum nec velit a fringilla. Nulla facilisi",
+  "heading": "Nam eu varius magna, vel molestie diam",
+  "paragraph1": "Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.",
+  "image": "https://picsum.photos/640/420/?random",
+  "altText": "Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel",
+  "paragraph2": "Integer lobortis, magna et tempor facilisis, arcu dui finibus mauris, pellentesque fringilla massa sem non justo. Phasellus vel arcu eu eros commodo egestas at non dui. Ut ultricies quis nunc ut commodo",
+  "paragraph3": "Aenean justo urna, tempor vitae consectetur nec, ornare eget nunc. Duis ornare ipsum in quam auctor feugiat. Vestibulum sapien metus, rutrum et mattis ut, tincidunt in dolor. Praesent semper laoreet augue. Etiam lacinia hendrerit euismod.",
+  "paragraph4": "Integer lobortis, magna et tempor facilisis, arcu dui finibus mauris, pellentesque fringilla massa sem non justo. Phasellus vel arcu eu eros commodo egestas at non dui. Ut ultricies quis nunc ut commodo",
+  "paragraph5": "Aenean justo urna, tempor vitae consectetur nec, ornare eget nunc. Duis ornare ipsum in quam auctor feugiat. Vestibulum sapien metus, rutrum et mattis ut, tincidunt in dolor. Praesent semper laoreet augue. Etiam lacinia hendrerit euismod.",
+  "image2": "https://picsum.photos/640/420/?random",
+  "altText2": "Curabitur dictum leo bibendum lacus ultrices fringilla et quis justo",
+  "paragraph6": "Morbi venenatis aliquam cursus. Sed eros elit, consequat id faucibus vel, interdum fringilla massa.",
+  "image3": "https://picsum.photos/640/420/?random",
+  "altText3": "Curabitur dictum leo bibendum lacus ultrices fringilla et quis justo",
+  "paragraph7": "Morbi venenatis aliquam cursus. Sed eros elit, consequat id faucibus vel, interdum fringilla massa."
 
 }
