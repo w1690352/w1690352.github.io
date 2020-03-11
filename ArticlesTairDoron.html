@@ -318,8 +318,8 @@
 						output+="<ol id=sortable>"
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
-							output+="<li>"
-							output+="<div class='smallArticleDiv' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
+							output+="<li id='"+jsonNew.articles[currentArticleToPrint].id+"'>"
+							output+="<div class='smallArticleDiv' >";
 							output+="<div class='mainPageIMGDIV'>"
 							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
 							{
