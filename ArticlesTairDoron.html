@@ -344,7 +344,8 @@
 		function getSortableReady(){
 			$("#BTNStitle").empty();
 			$("#BTNStitle").append("Current ranking:");
-			$("#prevBTN").remove();
+			$("#nextBTN").remove();
+			$("#prevBTN").html("Submit Rating");
 			$("#sortable").sortable({
 				update: function(event, ui) {
 					getRating();}
@@ -359,7 +360,7 @@
 			var divOrder = $('#sortable').sortable("toArray");
 			var orderDisply="";
 			for(i in divOrder){
-				orderDisply+="<div class='resortInFavs'><h3>"+i+". ";
+				orderDisply+="<div class='resortInFavs'><h3>"+(i+1)+". ";
 				orderDisply+=divOrder[i];
 				orderDisply+="</h3></div>";
 			}
