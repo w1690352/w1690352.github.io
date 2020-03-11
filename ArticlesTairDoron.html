@@ -75,7 +75,7 @@
 			nameOfJson+=".json"
 			
 			req=new XMLHttpRequest();
-    		req.open("GET","articles.json",true);
+    		req.open("GET",nameOfJson,true);
     		req.send();
     		req.onload=function()
 			{
@@ -85,22 +85,22 @@
 				var output="";
 				output+=" <header>";
 				output+=" <div id='topSection'>";
-				output+=" <h1 id=heading'>"+json.articles[0].heading+"</h1>";
+				output+=" <h1 id=heading'>"+json.heading+"</h1>";
 				output+=" </div>";
 				output+=" </header>";
 				output+=" <div class='text' id='firstPara'>";
-				output+=" <p id='paragraph1' class='paragraph'>"+json.articles[0].paragraph1+"</p>";
+				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
 				output+=" </div>";
 				output+=" <div class='images'>";	
-				output+=" <div class='biggerIMG'> <img alt='"+json.articles[0].alttext+"' src='"+json.articles[0].image+"?sig="+Math.random()+"' id='Image1'> </div>";
+				output+=" <div class='biggerIMG'> <img alt='"+json.alttext+"' src='"+json.image+"?sig="+Math.random()+"' id='Image1'> </div>";
 				output+=" </div>";
 				output+="  <div class='text'>";
-				output+="  <p id=paragraph2'  class='paragraph'>"+json.articles[0].paragraph2+"</p>";
+				output+="  <p id=paragraph2'  class='paragraph'>"+json.paragraph2+"</p>";
 				output+=" <br><br>";
-				output+="  <p id=paragraph3'  class='paragraph'>"+json.articles[0].paragraph3+"</p>";
+				output+="  <p id=paragraph3'  class='paragraph'>"+json.paragraph3+"</p>";
 				var list="<ul>"
 				for(var i in json.list){
-								list+="<li>"+json.articles[0].list[i]+"</li>";
+								list+="<li>"+json.list[i]+"</li>";
 						}
 						list+="</ul>"
 				output+=" <div id='list'>"+list+"</div>";
@@ -312,23 +312,23 @@
 
 
 				reqNew=new XMLHttpRequest();
-				reqNew.open("GET","articles.json",true);
-				reqNew.send();
-				reqNew.onload=function(){
-						jsonNew=JSON.parse(req.responseText);
+    			reqNew.open("GET","articles.json",true);
+    			reqNew.send();
+    			reqNew.onload=function()
+						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						//for (var currentArticleToPrint=1; currentArticleToPrint<6 ; currentArticleToPrint++){
-							output+="<div class='visibleResort' id='"+jsonNew.articles[0].id+"'>";
+						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++){
+							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
-							output+="<img class='mainPageIMG' src='"+jsonNew.articles[0].image+"?sig="+Math.random()+"'>";
+							output+="<img class='mainPageIMG' src='"+jsonNew.articles[currentArticleToPrint].image+"?sig="+Math.random()+"'>";
 							output+="</div>";
 							output+="<div class='textInVisible'>"
-							output+="<h1 class='name'>"+jsonNew.articles[0].title+"</h1>";
-							output+="<p class='price'>"+jsonNew.articles[0].heading+"</p>";
-							output+="<p class='short_description'>"+jsonNew.articles[0].paragraph1+"</p>";
+							output+="<h1 class='name'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
+							output+="<p class='price'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
+							output+="<p class='short_description'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
 							output+="</div></div>"
 							appndToAll(output);
-						//}
+						}
 				}
 		}
 		
