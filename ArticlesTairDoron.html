@@ -309,8 +309,10 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
+						output+="<ol id=sortable>"
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
+							output+="<li class='ui-state-default'><span class='ui-icon ui-icon-arrowthick-2-n-s'>"
 							output+="<div class='smallArticleDiv' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
 							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
@@ -323,6 +325,7 @@
 							output+="<p class='heading'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
 							output+="<p class='paragraph1'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
 							output+="</div></div>"
+							output+="</li>"
 						}
 						$("#displayAll").append(output);
 						getSortableReady();
@@ -333,11 +336,8 @@
 		
 		function getSortableReady(){
 			
-			$("#article1").sortable();
-			$("#article2").sortable();
-			$("#article3").sortable();
-			$("#article4").sortable();
-			$("#article5").sortable();
+			$("#sortable").sortable();
+
 		}
 
 		
