@@ -345,12 +345,16 @@
 			$("#BTNStitle").empty();
 			$("#BTNStitle").append("Current ranking:");
 			$("#prevBTN").remove();
-			$("#sortable").sortable();
-			$( "#sortable" ).disableSelection();
+			$("#sortable").sortable({
+				update: function(event, ui) {
+					getRating();}
+			});
+			$("#sortable" ).disableSelection();
 			
 		}
 		
 		function getRating(){
+			$("#myRatingText").empty();
 			var divOrder = $('#sortable').sortable("toArray");
 			var orderDisply="";
 			for(i in divOrder){
