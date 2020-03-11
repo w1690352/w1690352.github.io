@@ -349,8 +349,8 @@
 		}
 		
 		function getRating(){
-			var serializedString = $('#sortable').sortable("serialize");
-			$("#myRatingText").text(serializedString);
+			var serializedString = $('#sortable').sortable('toArray')
+			$("#myRatingText").append(serializedString);
 		}
 
 		
