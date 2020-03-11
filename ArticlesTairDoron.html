@@ -340,11 +340,8 @@
 			$("#nextBTN").remove();
 			$("#prevBTN").remove();
 			$("#sortable").sortable();
-			var ratingList = $("#sortable").sortable("toArray");
-			$("#myRating").append(ratingList[0]);
-			$("#myRating").append(ratingList[1]);
-			$("#myRating").append(ratingList[2]);
-			$("#myRating").append(ratingList[3]);
+			var serializedString = $('#sortable').sortable("serialize");
+			$("#myRating").text(serializedString);
 		}
 
 		
