@@ -309,7 +309,7 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
+						for (var currentArticleToPrint=0; currentArticleToPrint<2 ; currentArticleToPrint++)
 						{
 							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
@@ -320,18 +320,13 @@
 							output+="<p class='price'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
 							output+="<p class='short_description'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
 							output+="</div></div>"
-							appndToAll(output);
+							$("#displayAll").append(output);
+							alert(jsonNew.articles[currentArticleToPrint].id);
 						}
 				}
 		}
 		
-		function appndToAll(output){
-			
-			var localOutput = output;
-			$("#displayAll").append(localOutput);
-			
-		}
-		
+
 		
 		
   });
