@@ -311,7 +311,7 @@
 						var output="";
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
-							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
+							output+="<div class='smallArticleDiv' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
 							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
 							{
@@ -319,10 +319,9 @@
 							}
 							output+="</div>";
 							output+="<div class='textInVisible'>"
-							output+="<h1 class='name'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
-							output+="<p class='price'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
-							output+="<p class='short_description'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
-							output+="<p class='price'>"+jsonNew.articles[currentArticleToPrint].id+"</p>";
+							output+="<h1 class='title'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
+							output+="<p class='heading'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
+							output+="<p class='paragraph1'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
 							output+="</div></div>"
 						}
 						$("#displayAll").append(output);
