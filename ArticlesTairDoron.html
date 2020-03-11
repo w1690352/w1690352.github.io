@@ -359,8 +359,9 @@
 			$("#myRatingText").empty();
 			var divOrder = $('#sortable').sortable("toArray");
 			var orderDisply="";
+			var listNum = 0;
 			for(i in divOrder){
-				var listNum = i+1;
+				listNum++;
 				orderDisply+="<div class='resortInFavs'><h3>"+listNum+". ";
 				orderDisply+=divOrder[i];
 				orderDisply+="</h3></div>";
