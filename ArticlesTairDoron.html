@@ -323,12 +323,15 @@
 							output+="<p class='heading'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
 							output+="<p class='paragraph1'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
 							output+="</div></div>"
-							var id = "'#"+jsonNew.articles[currentArticleToPrint].id+"'";
-							$(id).sortable();
 						}
 						$("#displayAll").append(output);
-						
 				}
+				
+				$("#article1").sortable();
+				$("#article2").sortable();
+				$("#article3").sortable();
+				$("#article4").sortable();
+				$("#article5").sortable();
 		}
 		
 
