@@ -300,8 +300,8 @@
 			
 				$("#all").empty();
 				var currentArticleToPrint=0;
-				var counter = 1;
-				while(currentArticleToPrint<6 ){
+				var counter = 0;
+				while(currentArticleToPrint<5){
 						currentArticleToPrint++;
 						counter++;
 						$("#displayAll").append(counter);
@@ -331,9 +331,8 @@
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
 					sendOutput(output);
-					
 				};
-
+			req.abort();
 		}
 		
 		function sendOutput(output){
