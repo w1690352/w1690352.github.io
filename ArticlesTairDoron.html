@@ -33,11 +33,14 @@
 			if (currentArticle!=5){
 			currentArticle++;
 			displayArticle(currentArticle);}
-			else{
-				if(currentArticle==5){
+			else if (currentArticle==5){
 				currentArticle++;
 				printArticle();}
 			}
+			else{
+				getRating();
+							}
+							
 		});
 		
 		$("#prevBTN").click(function(){
@@ -337,9 +340,14 @@
 		function getSortableReady(){
 			$("#BTNStitle").empty();
 			$("#BTNStitle").append("Current ranking:");
-			$("#nextBTN").remove();
+			$("#nextBTN").empty();
+			("#nextBTN").append("Get Current Rating");
 			$("#prevBTN").remove();
 			$("#sortable").sortable();
+			
+		}
+		
+		function getRating(){
 			var serializedString = $('#sortable').sortable("serialize");
 			$("#myRating").text(serializedString);
 		}
