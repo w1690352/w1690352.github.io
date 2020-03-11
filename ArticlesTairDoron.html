@@ -318,19 +318,19 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
-						{
-							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
+						//for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
+						//{
+							output+="<div class='visibleResort' id='"+jsonNew.articles[0].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
-							output+="<img class='mainPageIMG' src='"+jsonNew.articles[currentArticleToPrint].image+"?sig="+Math.random()+"'>";
+							output+="<img class='mainPageIMG' src='"+jsonNew.articles[0].image+"?sig="+Math.random()+"'>";
 							output+="</div>";
 							output+="<div class='textInVisible'>"
-							output+="<h1 class='name'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
-							output+="<p class='price'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
-							output+="<p class='short_description'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
+							output+="<h1 class='name'>"+jsonNew.articles[0].title+"</h1>";
+							output+="<p class='price'>"+jsonNew.articles[0].heading+"</p>";
+							output+="<p class='short_description'>"+jsonNew.articles[0].paragraph1+"</p>";
 							output+="</div></div>"
 							appndToAll(output);
-						}
+						//}
 				}
 		}
 		
