@@ -19,12 +19,12 @@
 	<p id="myRatingText">
 	  </p>
 	</div>
-  <div id="BTNDIV">
+  
+	</form>
+	<div id="BTNDIV">
     <button id="prevBTN" class="BTNS">Previous Article</button>
     <button id="nextBTN" class="BTNS">Next Article</button>
-	
-  </div>
-		</form>
+ 	</div>
 </div>
 <div id="all"> </div>
 <div id="displayAll"></div>
@@ -349,7 +349,7 @@
 			$("#BTNStitle").append("Current ranking:");
 			$("#nextBTN").remove();
 			$("#prevBTN").remove();
-			var newBTN = "<button type='submit' class='BTNS' id='submitBTN'>Submit Rating</button>";
+			var newBTN = "<button type='submit' class='BTNS' id='submitBTN' form='ratingForm'>Submit Rating</button>";
 			$("#BTNDIV").append(newBTN);
 			$("#sortable").sortable({
 				update: function(event, ui) {
