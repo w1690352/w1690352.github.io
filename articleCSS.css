@@ -117,30 +117,6 @@ h1{
 
 }
 
-.favBTN{
-	color: white;
-	font-size: 20px;
-	border-radius: 20px;
-	background-color:rgba(0,0,139,0.70);
-	padding:15px;
-	display: block;
-	float: right;
-}
-
-.favBTN:hover{
-	cursor: pointer;
-}
-
-#favBTNActive{
-	color: aqua !important;
-
-}
-
-.favBTNActive:hover{
-	cursor: pointer;
-}
-
-
 
 .paragraph{
 	margin:0;
@@ -190,7 +166,7 @@ h1{
 
 /*****************************************found resorts***************************************/
 
-.visibleResort{
+.smallArticleDiv{
 	background-color: #F2F4F3;
 	width: 65%;
 	padding: 25px;
@@ -224,31 +200,7 @@ h1{
 }
 
 
-.favBTN{
-	color: white;
-	font-size: 20px;
-	border-radius: 20px;
-	background-color:rgba(0,0,139,0.70);
-	padding:15px;
-	display: block;
-	float: right;
-}
-
-.favBTN:hover{
-	cursor: pointer;
-	color: aqua
-}
-
-
-.destinationInVisible{
-	text-shadow: 0.5px 0.5px rgba(0,0,255,0.5);
-	margin:0;
-	padding:0;
-	text-decoration: underline;
-}
-
-
-.short_description{
+.paragraph1{
 	margin-top: 0px;
 	display: inline-block;
 	border-radius: 5px;
@@ -256,6 +208,13 @@ h1{
 	padding: 2px;
 	
 }
+
+.heading{
+	margin-top: 0px;
+	display: block;
+	width:inherit;
+	color:darkblue;
+	}
 
 /*MAIN PAGE*/
 h1 a{
