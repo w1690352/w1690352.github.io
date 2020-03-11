@@ -319,7 +319,7 @@
 					if(this.readyState ==4 && this.status == 200)
 					{
 						jsonNew=JSON.parse(req.responseText);
-
+						alert(jsonNew.id);
 						var output="";
 						output+="<div class='visibleResort' id='"+jsonNew.id+"'>";
 						output+="<div class='mainPageIMGDIV'>"
@@ -340,7 +340,7 @@
 			
 			var localOutput = output;
 			$("#displayAll").append(localOutput);
-			alert("new")
+			
 		}
 		
 		
