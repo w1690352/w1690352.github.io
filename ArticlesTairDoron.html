@@ -313,7 +313,10 @@
 						{
 							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
+							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
+							{
 							output+="<img class='mainPageIMG' src='"+jsonNew.articles[currentArticleToPrint].image+"?sig="+Math.random()+"'>";
+							}
 							output+="</div>";
 							output+="<div class='textInVisible'>"
 							output+="<h1 class='name'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
