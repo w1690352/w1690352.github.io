@@ -61,14 +61,6 @@ body{
 }
 
 
-#prevBTN::after{
-		content: "Previous Article"
-	}
-
-#nextBTN::after{
-		content: "Next Article"
-	}
-
 #BTNDIV{
 	margin-left:20%;
 }
