@@ -320,7 +320,7 @@
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
 
-					
+					$("#displayAll").append(output);
 				};
 			
 			
@@ -334,7 +334,7 @@
 				req.send();
 				req.onload=function()
 				{	
-					
+					var output=""
 					output+="<div class='visibleResort' id='"+json.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
 					output+="<img class='mainPageIMG' src='"+json.image+"?sig="+Math.random()+"'>";
@@ -345,11 +345,11 @@
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
 
-					
+					$("#displayAll").append(output);
 				};
 			
 			
-			$("#displayAll").append(output);
+			
 		}
 		
   });
