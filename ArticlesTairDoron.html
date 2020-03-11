@@ -315,11 +315,11 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						output+="<ol id=sortable>"
+						//output+="<ol id=sortable>"
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
-							output+="<li id='"+jsonNew.articles[currentArticleToPrint].id+"'>"
-							output+="<div class='smallArticleDiv' >";
+							//output+="<li id='"+jsonNew.articles[currentArticleToPrint].id+"'>"
+							output+="<div class='smallArticleDiv' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
 							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
 							{
@@ -331,7 +331,7 @@
 							output+="<p class='heading'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
 							output+="<p class='paragraph1'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
 							output+="</div></div>"
-							output+="</li>"
+							//output+="</li>"
 						}
 						$("#displayAll").append(output);
 						getSortableReady();
@@ -344,7 +344,7 @@
 			$("#BTNStitle").empty();
 			$("#BTNStitle").append("Current ranking:");
 			$("#prevBTN").remove();
-			$("#sortable").sortable();
+			$("#displayAll").sortable();
 			
 		}
 		
