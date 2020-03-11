@@ -315,9 +315,11 @@
     			reqNew.open("GET","articles.json",true);
     			reqNew.send();
     			reqNew.onload=function()
+				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++){
+						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
+						{
 							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
 							output+="<img class='mainPageIMG' src='"+jsonNew.articles[currentArticleToPrint].image+"?sig="+Math.random()+"'>";
