@@ -321,6 +321,7 @@
 				req.onload=function()
 				{	
 					json=JSON.parse(req.responseText);
+					
 					var output="";
 					output+="<div class='visibleResort' id='"+json.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
@@ -331,14 +332,10 @@
 					output+="<p class='price'>"+json.heading+"</p>";
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
-					sendOutput(output);
+					$("#displayAll").append(output);
 				};
 		}
 		
-		function sendOutput(output){
-			$("#displayAll").append(output);
-		}
-			
 		
 		
   });
