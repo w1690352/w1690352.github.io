@@ -297,19 +297,10 @@
     		};
 		};
 		
-	/*	function displayAllArticles(){
-			
-				$("#all").empty();
-				
-				
-				while(currentArticleToPrint<5){
-					
-					printArticle(currentArticleToPrint);
-					};
-			}*/
 		
 		function printArticle(){
-
+			
+				$("#all").empty();
 
 				reqNew=new XMLHttpRequest();
     			reqNew.open("GET","articles.json",true);
@@ -318,8 +309,8 @@
 				{
 						jsonNew=JSON.parse(reqNew.responseText);
 						var output="";
-						//for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
-						//{
+						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
+						{
 							output+="<div class='visibleResort' id='"+jsonNew.articles[0].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
 							output+="<img class='mainPageIMG' src='"+jsonNew.articles[0].image+"?sig="+Math.random()+"'>";
@@ -330,7 +321,7 @@
 							output+="<p class='short_description'>"+jsonNew.articles[0].paragraph1+"</p>";
 							output+="</div></div>"
 							appndToAll(output);
-						//}
+						}
 				}
 		}
 		
