@@ -299,16 +299,14 @@
 		function displayAllArticles(){
 			
 				$("#all").empty();
-				var output="";
-				for(var currentArticleToPrint =1; currentArticleToPrint<5 ; currentArticleToPrint++){
-						output+= printArticle(currentArticleToPrint);
+				
+				for(var currentArticleToPrint =1; currentArticleToPrint<6 ; currentArticleToPrint++){
+						printArticle(currentArticleToPrint);
 					};
-				$("#displayAll").append(output);
-			
 				
-				
-				
+					
 			}
+		
 		function printArticle(currentArticleToPrint){
 			
 			var nameOfJson = "article";
@@ -330,8 +328,14 @@
 					output+="<p class='price'>"+json.heading+"</p>";
 					output+="<p class='short_description'>"+json.paragraph1+"</p>";
 					output+="</div></div>"
-					return output;
+					sendOutput(output);
+					
 				};
+
+		}
+		
+		function sendOutput(output){
+			$("#displayAll").append(output)
 		}
 			
 		
