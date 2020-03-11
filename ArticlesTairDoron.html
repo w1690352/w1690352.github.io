@@ -28,9 +28,18 @@
 		var currentArticle = 0;
 		
 		$("#nextBTN").click(function(){
-			if (currentArticle!=4){
+			if (currentArticle!=5){
 			currentArticle++;
 			displayArticle(currentArticle);}
+			else{
+				$("#all").empty();
+				var output="";
+				output+=" <header>";
+				output+=" <div id='topSection'>";
+				output+=" <h1 id=heading'> DONE </h1>";
+				output+=" </div>";
+				$("#all").append(output);
+			}
 		});
 		
 		$("#prevBTN").click(function(){
@@ -50,6 +59,12 @@
 			}
 			else if(currentArticle == 3){
 				displayArticle3();
+			}
+			else if(currentArticle == 4){
+				displayArticle4();
+			}
+			else if(currentArticle == 5){
+				displayArticle5();
 			}
 		}
 		
@@ -196,6 +211,93 @@
 				
     		};
 		}	
+		
+		function displayArticle4(){
+			$("#all").empty();
+			
+			
+			var nameOfJson = "article";
+			nameOfJson+=currentArticle;
+			nameOfJson+=".json"
+			
+			req=new XMLHttpRequest();
+    		req.open("GET",nameOfJson,true);
+    		req.send();
+    		req.onload=function()
+			{
+				json=JSON.parse(req.responseText);
+	
+				document.getElementsByTagName("title")[0].innerHTML = json.title;
+				var output="";
+				output+=" <header>";
+				output+=" <div id='topSection'>";
+				output+=" <h1 id=heading'>"+json.heading+"</h1>";
+				output+=" </div>";
+				output+=" </header>";			
+				output+=" <div class='text' id='firstPara'>";
+				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
+				output+=" </div>";
+				var list="<ul>"
+				for(var i in json.list){
+								list+="<li>"+json.list[i]+"</li>";
+						}
+						list+="</ul>"
+				output+=" <div id='list'>"+list+"</div>";
+				output+="  <div class='text'>";
+				output+="  <p id=paragraph2'  class='paragraph'>"+json.paragraph2+"</p>";
+				output+=" </div>";
+				var list2="<ul>"
+				for(var i in json.list2){
+								list2+="<li>"+json.list2[i]+"</li>";
+						}
+						list2+="</ul>"
+				output+=" <div id='list2'>"+list2+"</div>";
+				output+="  <div class='text'>";
+				output+="  <p id=paragraph3'  class='paragraph'>"+json.paragraph3+"</p>";
+				output+=" </div>";
+				
+				$("#all").append(output);
+				
+    		};
+		};
+		
+		function displayArticle5(){
+			$("#all").empty();
+			
+			
+			var nameOfJson = "article";
+			nameOfJson+=currentArticle;
+			nameOfJson+=".json"
+			
+			req=new XMLHttpRequest();
+    		req.open("GET",nameOfJson,true);
+    		req.send();
+    		req.onload=function()
+			{
+				json=JSON.parse(req.responseText);
+	
+				document.getElementsByTagName("title")[0].innerHTML = json.title;
+				var output="";
+				output+=" <header>";
+				output+=" <div id='topSection'>";
+				output+=" <h1 id=heading'>"+json.heading+"</h1>";
+				output+=" </div>";
+				output+=" </header>";	
+				output+=" <div class='images'>";	
+				output+=" <div class='biggerIMG'> ";
+				output+=" <img alt='"+json.alttext+"' src='"+json.image+"' id='Image1'> ";
+				output+=" <img alt='"+json.alttext2+"' src='"+json.image2+"' id='Image2'> ";
+				output+=" </div>";
+				output+=" </div>";
+				output+=" <div class='text' id='firstPara'>";
+				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
+				output+=" </div>";
+				
+				
+				$("#all").append(output);
+				
+    		};
+		};
 		
   });
 	

@@ -1,0 +1,12 @@
+{
+
+  "id": "article5",
+  "title": "Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu",
+  "heading": "Nulla nibh erat, pharetra at ultricies nec, tincidunt luctus arcu",
+  "image": "https://picsum.photos/640/420/?random",
+  "altText": "Donec purus augue, lobortis et velit maximus, rutrum scelerisque ipsum",
+  "image2": "https://picsum.photos/640/420/?random",
+  "altText2": "Etiam at nisl diam",
+  "paragraph1": "Suspendisse id erat a nibh rutrum consectetur. Ut porttitor arcu id nibh pellentesque, et laoreet sapien accumsan. Phasellus quis finibus ipsum. Cras malesuada eu arcu sed laoreet. Nulla egestas ac eros vel eleifend. Nam porta ornare nisl, quis gravida dolor sagittis a."
+
+}
