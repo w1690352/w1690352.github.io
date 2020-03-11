@@ -23,7 +23,7 @@
 <div id="all"> </div>
 <div id="displayAll"></div>
 <script>
-	var currentArticleToPrint=1;
+	
 	
 	$(document).ready(function(){
 		
@@ -36,7 +36,7 @@
 			else{
 				if(currentArticle==5){
 				currentArticle++;
-				displayAllArticles();}
+				printArticle();}
 			}
 		});
 		
@@ -297,7 +297,7 @@
     		};
 		};
 		
-		function displayAllArticles(){
+	/*	function displayAllArticles(){
 			
 				$("#all").empty();
 				
@@ -306,35 +306,30 @@
 					
 					printArticle(currentArticleToPrint);
 					};
-			}
+			}*/
 		
-		function printArticle(currentArticleToPrint){
-			
-			var nameOfJsonNew = "article";
-				nameOfJsonNew+=currentArticleToPrint;
-				nameOfJsonNew+=".json"
+		function printArticle(){
+
 
 				reqNew=new XMLHttpRequest();
-				reqNew.onreadystatechange=function(){
-					if(this.readyState ==4 && this.status == 200)
-					{
-						jsonNew=JSON.parse(req.responseText);
-						alert(jsonNew.id);
-						var output="";
-						output+="<div class='visibleResort' id='"+jsonNew.id+"'>";
-						output+="<div class='mainPageIMGDIV'>"
-						output+="<img class='mainPageIMG' src='"+jsonNew.image+"?sig="+Math.random()+"'>";
-						output+="</div>";
-						output+="<div class='textInVisible'>"
-						output+="<h1 class='name'>"+jsonNew.title+"</h1>";
-						output+="<p class='price'>"+jsonNew.heading+"</p>";
-						output+="<p class='short_description'>"+jsonNew.paragraph1+"</p>";
-						output+="</div></div>"
-						appndToAll(output);
-						currentArticleToPrint++;
-					}};
-				reqNew.open("GET",nameOfJsonNew,true);
+				reqNew.open("GET","articles.json",true);
 				reqNew.send();
+				reqNew.onload=function(){
+						jsonNew=JSON.parse(req.responseText);
+						var output="";
+						for (var currentArticleToPrint=1; currentArticleToPrint<6 ; currentArticleToPrint++){
+							output+="<div class='visibleResort' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
+							output+="<div class='mainPageIMGDIV'>"
+							output+="<img class='mainPageIMG' src='"+jsonNew.articles[currentArticleToPrint].image+"?sig="+Math.random()+"'>";
+							output+="</div>";
+							output+="<div class='textInVisible'>"
+							output+="<h1 class='name'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
+							output+="<p class='price'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
+							output+="<p class='short_description'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
+							output+="</div></div>"
+							appndToAll(output);
+						}
+				}
 		}
 		
 		function appndToAll(output){
