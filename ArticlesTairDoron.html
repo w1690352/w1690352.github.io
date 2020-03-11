@@ -89,18 +89,18 @@
 				output+=" </div>";
 				output+=" </header>";
 				output+=" <div class='text' id='firstPara'>";
-				output+=" <p id='paragraph1' class='paragraph'>"+json..articles[0].paragraph1+"</p>";
+				output+=" <p id='paragraph1' class='paragraph'>"+json.articles[0].paragraph1+"</p>";
 				output+=" </div>";
 				output+=" <div class='images'>";	
-				output+=" <div class='biggerIMG'> <img alt='"+json..articles[0].alttext+"' src='"+json..articles[0].image+"?sig="+Math.random()+"' id='Image1'> </div>";
+				output+=" <div class='biggerIMG'> <img alt='"+json.articles[0].alttext+"' src='"+json.articles[0].image+"?sig="+Math.random()+"' id='Image1'> </div>";
 				output+=" </div>";
 				output+="  <div class='text'>";
-				output+="  <p id=paragraph2'  class='paragraph'>"+json..articles[0].paragraph2+"</p>";
+				output+="  <p id=paragraph2'  class='paragraph'>"+json.articles[0].paragraph2+"</p>";
 				output+=" <br><br>";
-				output+="  <p id=paragraph3'  class='paragraph'>"+json..articles[0].paragraph3+"</p>";
+				output+="  <p id=paragraph3'  class='paragraph'>"+json.articles[0].paragraph3+"</p>";
 				var list="<ul>"
 				for(var i in json.list){
-								list+="<li>"+json..articles[0].list[i]+"</li>";
+								list+="<li>"+json.articles[0].list[i]+"</li>";
 						}
 						list+="</ul>"
 				output+=" <div id='list'>"+list+"</div>";
