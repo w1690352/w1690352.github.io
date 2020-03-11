@@ -14,7 +14,7 @@
 <body>
 <div id="BTNS">
   <h3 id="BTNStitle">Browse Articles</h3>
-  <div id="myFaves"></div>
+  <div id="myRating"></div>
   <div id="BTNDIV">
     <button id="prevBTN" class="BTNS"></button>
     <button id="nextBTN" class="BTNS"></button>
@@ -335,9 +335,12 @@
 		
 		
 		function getSortableReady(){
-			
+			$("#BTNStitle").append("Current ranking:")
+			$("#nextBTN").remove();
+			$("#prevBTN").remove();
 			$("#sortable").sortable();
-
+			var ratingList = $("#sortable").sortable("toArray");
+			$("#myRating").append(ratingList);
 		}
 
 		
