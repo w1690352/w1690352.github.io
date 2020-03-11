@@ -315,22 +315,22 @@
 				nameOfJson+=currentArticleToPrint;
 				nameOfJson+=".json"
 
-				req=new XMLHttpRequest();
-				req.open("GET",nameOfJson,true);
-				req.send();
-				req.onload=function()
+				reqNew=new XMLHttpRequest();
+				reqNew.open("GET",nameOfJson,true);
+				reqNew.send();
+				reqNew.onload=function()
 				{	
-					json=JSON.parse(req.responseText);
+					jsonNew=JSON.parse(req.responseText);
 					
 					var output="";
-					output+="<div class='visibleResort' id='"+json.id+"'>";
+					output+="<div class='visibleResort' id='"+jsonNew.id+"'>";
 					output+="<div class='mainPageIMGDIV'>"
-					output+="<img class='mainPageIMG' src='"+json.image+"?sig="+Math.random()+"'>";
+					output+="<img class='mainPageIMG' src='"+jsonNew.image+"?sig="+Math.random()+"'>";
 					output+="</div>";
 					output+="<div class='textInVisible'>"
-					output+="<h1 class='name'>"+json.title+"</h1>";
-					output+="<p class='price'>"+json.heading+"</p>";
-					output+="<p class='short_description'>"+json.paragraph1+"</p>";
+					output+="<h1 class='name'>"+jsonNew.title+"</h1>";
+					output+="<p class='price'>"+jsonNew.heading+"</p>";
+					output+="<p class='short_description'>"+jsonNew.paragraph1+"</p>";
 					output+="</div></div>"
 					$("#displayAll").append(output);
 				};
