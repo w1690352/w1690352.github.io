@@ -23,6 +23,7 @@
 <div id="all"> </div>
 <div id="displayAll"></div>
 <script>
+	static var counter = 0;
 	
 	$(document).ready(function(){
 		
@@ -300,12 +301,13 @@
 			
 				$("#all").empty();
 				var currentArticleToPrint=0;
-				var counter = 0;
 				while(currentArticleToPrint<5){
+					if (counter=0){
+					currentArticleToPrint++;
+					printArticle(currentArticleToPrint);}
+					if (counter=1){
 						currentArticleToPrint++;
-						counter++;
-						printArticle(currentArticleToPrint);
-						$("#displayAll").append(counter);
+						printArticle(currentArticleToPrint);}
 					};
 			}
 		
@@ -337,6 +339,7 @@
 		}
 		
 		function appndToAll(output){
+			counter++;
 			var localOutput = output;
 			$("#displayAll").append(localOutput);
 		}
