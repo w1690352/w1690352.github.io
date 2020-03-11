@@ -23,7 +23,7 @@
 <div id="all"> </div>
 <div id="displayAll"></div>
 <script>
-	var counter= 0;
+	var currentArticleToPrint=1;
 	
 	$(document).ready(function(){
 		
@@ -300,10 +300,10 @@
 		function displayAllArticles(){
 			
 				$("#all").empty();
-				var currentArticleToPrint=0;
+				
 				
 				while(currentArticleToPrint<5){
-					currentArticleToPrint++;
+					
 					printArticle(currentArticleToPrint);
 					};
 			}
@@ -331,6 +331,7 @@
 						output+="<p class='short_description'>"+jsonNew.paragraph1+"</p>";
 						output+="</div></div>"
 						appndToAll(output);
+						currentArticleToPrint++;
 					}};
 				reqNew.open("GET",nameOfJsonNew,true);
 				reqNew.send();
