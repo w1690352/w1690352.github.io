@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/* 
-fonts:
-<link href="https://fonts.googleapis.com/css?family=Alatsi|Muli&display=swap" rel="stylesheet">
-	Titles: font-family: 'Alatsi', sans-serif;
-	Text: font-family: 'Muli', sans-serif;
-general colors:
-
-
-*/
 
 
 body{
@@ -74,7 +65,7 @@ body{
 	margin:20px;
 }
 
-/*HEADER*/
+
 
 #topSection{
 	background-color: #F2F4F3;
@@ -120,8 +111,7 @@ h1{
 	margin-left: 10px;
 }
 
-/*Image Gallery*/
-
+/*Image */
 .images{
 	height:100%;
 	padding:25px;

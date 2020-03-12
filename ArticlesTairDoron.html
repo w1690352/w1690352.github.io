@@ -11,8 +11,9 @@
 <title>Articles</title>
 </head>
 <body>
-
+<!-- Div where the next and previous buttons are displayed and later the rating-->
 <div id="BTNS">
+	<!-- no action is implemented as specified in specs-->
 	<form method="post" id="ratingForm">
   <h3 id="BTNStitle"></h3>
   <div id="myRating">
@@ -26,7 +27,9 @@
     <button id="nextBTN" class="BTNS">Next Article</button>
  	</div>
 </div>
+<!-- Div all will show the current article-->
 <div id="all"> </div>
+<!-- Div displayAll will later store and show all articles in small version-->	
 <div id="displayAll"></div>
 <script>
 	
@@ -36,20 +39,19 @@
 		var currentArticle = 0;
 		
 		$("#nextBTN").click(function(){
+			// Every time the user clickes next the current article counter will increase and call the displayArticle function
 			if (currentArticle<5){
 			currentArticle++;
 			displayArticle(currentArticle);}
+			// if cuurent article is 5 meaning we have showen the user all the different articles then a diffrent functionis called
 			else if (currentArticle==5){
 				currentArticle++;
 				printArticle();
 			}
-			else{
-				getRating();
-							}
-							
 		});
 		
 		$("#prevBTN").click(function(){
+			// As long as its not 1 or 0 the current aticled decreases and calls the function to display the correct article
 			if(currentArticle>1){
 			currentArticle--;
 			displayArticle(currentArticle);}
@@ -57,7 +59,7 @@
 		
 		
 		function displayArticle (currentArticle){
-			
+			//calles the function to display the right article
 			if (currentArticle == 1){
 				displayArticle1();
 			}
@@ -75,25 +77,31 @@
 			}
 		}
 		
+		//each article is styled differently so they each have their own function
+		
 		function displayArticle1(){
 			$("#all").empty();
 			
-			
+			//get correct json Name
 			var nameOfJson = "article";
 			nameOfJson+=currentArticle;
 			nameOfJson+=".json"
 			
+			//create a XMLHttpRequest() to GET the json
 			req=new XMLHttpRequest();
     		req.open("GET",nameOfJson,true);
     		req.send();
     		req.onload=function()
 			{
 				json=JSON.parse(req.responseText);
+				
+				//once the json is uploaded build the html of the article within var output
 	
 				document.getElementsByTagName("title")[0].innerHTML = json.title;
 				var output="";
 				output+=" <header>";
 				output+=" <div id='topSection'>";
+				//get the article heading from the json
 				output+=" <h1 id=heading'>"+json.heading+"</h1>";
 				output+=" </div>";
 				output+=" </header>";
@@ -101,6 +109,7 @@
 				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
 				output+=" </div>";
 				output+=" <div class='images'>";	
+				// get all image attributes from json
 				output+=" <div class='biggerIMG'> <img alt='"+json.alttext+"' src='"+json.image+"?sig="+Math.random()+"' id='Image1'> </div>";
 				output+=" </div>";
 				output+="  <div class='text'>";
@@ -113,7 +122,7 @@
 						}
 						list+="</ul>"
 				output+=" <div id='list'>"+list+"</div>";
-				
+				// append the output to the all div so the article is displayed
 				$("#all").append(output);
 				
     		};
@@ -122,11 +131,12 @@
 		function displayArticle2(){
 			$("#all").empty();
 			
-
+			//get correct json Name
 			var nameOfJson = "article";
 			nameOfJson+=currentArticle;
 			nameOfJson+=".json"
 			
+			//create a XMLHttpRequest() to GET the json
 			req=new XMLHttpRequest();
     		req.open("GET",nameOfJson,true);
     		req.send();
@@ -134,6 +144,7 @@
 			{
 				json=JSON.parse(req.responseText);
 	
+				//once the json is uploaded build the html of the article within var output
 				document.getElementsByTagName("title")[0].innerHTML = json.title;
 				var output="";
 				output+=" <header>";
@@ -168,7 +179,7 @@
 				output+="  <div class='text'>";
 				output+="  <p id=paragraph7'  class='paragraph'>"+json.paragraph7+"</p>";
 				output+=" </div>";
-				
+				// append the output to the all div so the article is displayed
 				$("#all").append(output);
 				
     		};
@@ -177,18 +188,18 @@
 		function displayArticle3(){
 			$("#all").empty();
 			
-
+			//get correct json Name
 			var nameOfJson = "article";
 			nameOfJson+=currentArticle;
 			nameOfJson+=".json"
-			
+			//create a XMLHttpRequest() to GET the json
 			req=new XMLHttpRequest();
     		req.open("GET",nameOfJson,true);
     		req.send();
     		req.onload=function()
 			{
 				json=JSON.parse(req.responseText);
-	
+				//once the json is uploaded build the html of the article within var output
 				document.getElementsByTagName("title")[0].innerHTML = json.title;
 				var output="";
 				output+=" <header>";
@@ -213,7 +224,7 @@
 				output+=" <br><br>";
 				output+="  <p id=paragraph8'  class='paragraph'>"+json.paragraph8+"</p>";
 				output+=" </div>";
-				
+				// append the output to the all div so the article is displayed
 				$("#all").append(output);
 				
     		};
@@ -222,18 +233,19 @@
 		function displayArticle4(){
 			$("#all").empty();
 			
-			
+			//get correct json Name
 			var nameOfJson = "article";
 			nameOfJson+=currentArticle;
 			nameOfJson+=".json"
 			
+			//create a XMLHttpRequest() to GET the json
 			req=new XMLHttpRequest();
     		req.open("GET",nameOfJson,true);
     		req.send();
     		req.onload=function()
 			{
 				json=JSON.parse(req.responseText);
-	
+				//once the json is uploaded build the html of the article within var output
 				document.getElementsByTagName("title")[0].innerHTML = json.title;
 				var output="";
 				output+=" <header>";
@@ -262,7 +274,7 @@
 				output+="  <div class='text'>";
 				output+="  <p id=paragraph3'  class='paragraph'>"+json.paragraph3+"</p>";
 				output+=" </div>";
-				
+				// append the output to the all div so the article is displayed
 				$("#all").append(output);
 				
     		};
@@ -270,19 +282,20 @@
 		
 		function displayArticle5(){
 			$("#all").empty();
-			$("#displayAll").empty();
 			
+			//get correct json Name
 			var nameOfJson = "article";
 			nameOfJson+=currentArticle;
 			nameOfJson+=".json"
 			
+			//create a XMLHttpRequest() to GET the json
 			req=new XMLHttpRequest();
     		req.open("GET",nameOfJson,true);
     		req.send();
     		req.onload=function()
 			{
 				json=JSON.parse(req.responseText);
-	
+				//once the json is uploaded build the html of the article within var output
 				document.getElementsByTagName("title")[0].innerHTML = json.title;
 				var output="";
 				output+=" <header>";
@@ -300,17 +313,18 @@
 				output+=" <p id='paragraph1' class='paragraph'>"+json.paragraph1+"</p>";
 				output+=" </div>";
 				
-				
+				// append the output to the all div so the article is displayed
 				$("#all").append(output);
 				
     		};
 		};
 		
-		
+		//after all 5 articles have been showen show all articles in small format
 		function printArticle(){
 			
 				$("#all").empty();
-
+						
+				//GET the json file with all articles	
 				reqNew=new XMLHttpRequest();
     			reqNew.open("GET","articles.json",true);
     			reqNew.send();
@@ -324,11 +338,13 @@
 						output+="</div>";
 						output+="</div>";
 						output+="<ul id=sortable>"
+						// loop through the articles array in the json and create each article in html
 						for (var currentArticleToPrint=0; currentArticleToPrint<5 ; currentArticleToPrint++)
 						{
 							output+="<li id='"+jsonNew.articles[currentArticleToPrint].id+"'>"
 							output+="<div class='smallArticleDiv' id='"+jsonNew.articles[currentArticleToPrint].id+"'>";
 							output+="<div class='mainPageIMGDIV'>"
+							//not all articles contain an image
 							if(jsonNew.articles[currentArticleToPrint].image!=undefined)
 							{
 							output+="<img class='mainPageIMG' src='"+jsonNew.articles[currentArticleToPrint].image+"?sig="+Math.random()+"'>";
@@ -337,12 +353,14 @@
 							output+="<div class='textInVisible'>"
 							output+="<h1 class='title'>"+jsonNew.articles[currentArticleToPrint].title+"</h1>";
 							output+="<p class='heading'>"+jsonNew.articles[currentArticleToPrint].heading+"</p>";
-							output+="<p class='paragraph1'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"</p>";
+							output+="<p class='paragraph1'>"+jsonNew.articles[currentArticleToPrint].paragraph1+"...</p>";
 							output+="</div></div>"
 							output+="</li>"
 						}
 						output+="</ul>"
+						//add the output to displayall div
 						$("#displayAll").append(output);
+						//call to function that sets up the sortable funcitonality
 						getSortableReady();
 				}
 
@@ -350,28 +368,32 @@
 		
 		
 		function getSortableReady(){
-			$("#BTNStitle").empty();
+			//remove the next and previous buttons and add a title and new submit button
 			$("#BTNStitle").append("Current ranking:");
 			$("#nextBTN").remove();
 			$("#prevBTN").remove();
 			var newBTN = "<button type='submit' class='BTNS' id='submitBTN' form='ratingForm'>Submit Rating</button>";
 			$("#BTNDIV").append(newBTN);
+			//make the articles sortable and call a function everytime the user updates the order
 			$("#sortable").sortable({
 				update: function(event, ui) {
 					getRating();}
 			});
 			$("#sortable" ).disableSelection();
+			//get the initial rating 
 			getRating();
 			
 		}
 		
 		function getRating(){
 			$("#myRatingText").empty();
+			// get the order of the articles
 			var divOrder = $('#sortable').sortable("toArray");
 			var orderDisply="";
 			var listNum = 0;
 			for(i in divOrder){
 				listNum++;
+				// add the article names
 				orderDisply+="<div class='articleInRating'><h3>"+listNum+". ";
 				orderDisply+=divOrder[i];
 				orderDisply+="</h3></div>";
@@ -379,22 +401,13 @@
 				
 			}
 			$("#myRatingText").append(orderDisply);
-		}
-		
-		function def(){
-			return null;
-		}
-
-		
+		}		
 		
   });
 	
 	</script>
 <footer> 
-  <!--semantic elements article, footer, header, aside...-->
-  <p> Tair Doron    |
-    <telephone>07592396425</telephone>
-    | <a href="mailto:tairdoron@me.com"> tairdoron@me.com </a> </p>
+  <p> Tair Doron    |  <telephone>07592396425</telephone>| <a href="mailto:tairdoron@me.com"> tairdoron@me.com </a> </p>
 </footer>
 </body>
 </html>
