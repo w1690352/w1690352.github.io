@@ -397,6 +397,7 @@
 				orderDisply+="<div class='articleInRating'><h3>"+listNum+". ";
 				orderDisply+=divOrder[i];
 				orderDisply+="</h3></div>";
+				// hidden var containing the articles id - when we post these vars will be posted to server so we can later see the users rating
 				orderDisply+="<input type='hidden' name='number"+listNum+"' value="+divOrder[i]+">"
 				
 			}
