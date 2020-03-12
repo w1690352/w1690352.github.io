@@ -13,7 +13,7 @@
 
 <body>
 <div id="BTNS">
-	<form action="ArticlesTairDoron.html" method="post" id="ratingForm">
+	<form action="rating.php" method="post" id="ratingForm">
   <h3 id="BTNStitle">Browse Articles</h3>
   <div id="myRating">
 	<p id="myRatingText">
@@ -375,7 +375,7 @@
 				orderDisply+="<div class='resortInFavs'><h3>"+listNum+". ";
 				orderDisply+=divOrder[i];
 				orderDisply+="</h3></div>";
-				orderDisply+="<input type='hidden' name="+listNum+" id="+divOrder[i]+" value="+divOrder[i]+">"
+				orderDisply+="<input type='hidden' name=number"+listNum+" id="+divOrder[i]+" value="+divOrder[i]+">"
 			}
 			$("#myRatingText").append(orderDisply);
 		}
