@@ -14,7 +14,7 @@
 
 <div id="BTNS">
 	<form method="post" id="ratingForm">
-  <h3 id="BTNStitle">Browse Articles</h3>
+  <h3 id="BTNStitle"></h3>
   <div id="myRating">
 	<p id="myRatingText">
 	  </p>
@@ -372,7 +372,7 @@
 			var listNum = 0;
 			for(i in divOrder){
 				listNum++;
-				orderDisply+="<div class='resortInFavs'><h3>"+listNum+". ";
+				orderDisply+="<div class='articleInRating'><h3>"+listNum+". ";
 				orderDisply+=divOrder[i];
 				orderDisply+="</h3></div>";
 				orderDisply+="<input type='hidden' name='number"+listNum+"' value="+divOrder[i]+">"

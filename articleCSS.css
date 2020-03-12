@@ -36,12 +36,12 @@ body{
 	text-decoration: underline;
 }
 
-.resortInFavs{
+.articleInRating{
 	background-color: rgba(0,0,255,0.05);
 	padding-left: 10px;
 }
 
-.resortInFavs h3 {
+.articleInRating h3 {
 	color: black;
 }
 
@@ -141,15 +141,6 @@ h1{
 
 
 
-.container{
-	margin-top: -20px;
-	padding: 15px;
-	background-color: #F2F4F3;
-	border-radius: 0px 0px 20px 20px;
-	box-shadow: 0px 5px 5px rgba(0, 0, 139, 0.2);
-}
-
-
 /*****************************************all articles***************************************/
 
 .smallArticleDiv{
@@ -237,14 +228,12 @@ footer a{
 }
 
 
-/*CSS Pseudo-elements*/
 footer a::before{
 	content: "\2709";
 	font-size: 24px;
 	padding: 3px;
 }
 
-/*CSS Pseudo-elements*/
 footer telephone::before{
 	content: "\260F";
 	font-size: 24px;
