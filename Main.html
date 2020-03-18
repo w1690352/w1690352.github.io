@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy: script-src https://cdn.example.com/scripts/; object-src 'none'">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Alatsi|Muli&display=swap" rel="stylesheet">
+<link href="MainCss.css" rel="stylesheet" type="text/css">
+<title>Emergency Procedure</title>
+</head>
+<body>
+<!-- Div where the next and previous buttons are displayed and later the rating-->
+<div id="BTNS">
+	<!-- no action is implemented as specified in specs-->
+	<form method="post" id="ratingForm">
+  <h3 id="BTNStitle"></h3>
+  <div id="myRating">
+	<p id="myRatingText">
+	  </p>
+	</div>
+  
+	</form>
+	<div id="BTNDIV">
+ 	</div>
+</div>
+
+<!-- Div displayAll will later store and show all articles in small version-->	
+<div id="displayAll"></div>
+<script>
+	
+	var data={"steps": [
+        {
+            "id":"First_aid",
+			"numberInArray":0,
+			"title":"Start first aid procedures",
+            "paragraph1":"Preform the neccasery first aid to evaluate the situation",
+            "image":"firstAid.jpg",
+			"altText":"Image of First Aid kit",
+        },
+		{
+            "id":"Work_out_where_you_are",
+			"numberInArray":1,
+			"title":"Work out where you are",
+            "paragraph1":"Use your map to find your grid reference",
+            "image":"locatePosition.jpg",
+			"altText":"Image of locate Position",
+        },
+		{
+            "id":"Phone_emergency_services",
+			"numberInArray":2,
+			"title":"Try phoning emergency services",
+            "paragraph1":"Try calling 999 or 112",
+            "image":"emergancyServices.jpg",
+			"altText":"Image of emergancy services",
+        },
+		{
+            "id":"Call_and_text_supervisor",
+			"numberInArray":3,
+			"title":"Try calling and texting your supervisor",
+            "paragraph1":"Call the emergency number and text us these four things:Your location, What happaned, Who it happend to and The time the text was sent",
+            "image":"phoneOrText.jpg",
+			"altText":"Image of a phone",
+        },
+		{
+            "id":"Shout_for_help",
+			"numberInArray":4,
+			"title":"Shout for help",
+            "paragraph1":"Try shouting for help.",
+            "image":"shoutForHelp.jpg",
+			"altText":"Image of a man shouting",
+        },
+		{
+            "id":"Get_csualty_in_a_survival_bag",
+			"numberInArray":5,
+			"title":"Get casualty in a survival bag",
+            "paragraph1":"Designed to reduce the loss of body heat in an emergency, the Survival Bag serves as a personal emergency shelter",
+            "image":"survivalBag.jpg",
+			"altText":"Image of a man in a survival bag",
+        },
+		{
+            "id":"Write_down_your_location_and_casualty_details",
+			"numberInArray":6,
+			"title":"Write down your location and casualty details",
+            "paragraph1":"When someone will go out to get help they will take this note with them",
+            "image":"writeWhathappend.jpg",
+			"altText":"Image of a note",
+        },
+		{
+            "id":"Write_down_where_people_are_going_for_help",
+			"numberInArray":7,
+			"title":"Write down where people are goingfor help",
+            "paragraph1":"This note will stay with the people who stay with the casualty",
+            "image":"whereDidTheyGo.jpg",
+			"altText":"Image of a note",
+        },
+		{
+            "id":"Send_two_people_out_to_get_help",
+			"numberInArray":8,
+			"title":"Send two people out to get help",
+            "paragraph1":"They will take the phone with them to try and get sevice to call us or emergency services",
+            "image":"send2Out.jpg",
+			"altText":"Image of two hikers",
+        },
+		{
+            "id":"Set_up_a_location_marker",
+			"numberInArray":9,
+			"title":"Set up a location marker",
+            "paragraph1":"This will be set up on a main road close to you so we can find you easily",
+            "image":"locationMarker.jpg",
+			"altText":"Image of a location marker",
+        },
+		{
+            "id":"Make_sure_all_group_members_are_wearing_dry_and_warm_clothing",
+			"numberInArray":10,
+			"title":"Make sure all group members are wearing dry and warm clothing",
+            "paragraph1":"Take care of casualty first",
+            "image":"warmDry.jpg",
+			"altText":"Image of a fleece",
+        },
+		{
+            "id":"Put_up_a_tent",
+			"numberInArray":11,
+			"title":"Put up a tent",
+            "paragraph1":"To protect the group members and casulty from the weather",
+            "image":"tent.jpg",
+			"altText":"Image of a tent",
+        },
+		{
+            "id":"Start_a_log_of_events",
+			"numberInArray":12,
+			"title":"Start a log of events and track the casualty's condition",
+            "paragraph1":"This will be given to us or emergency srevices so we know what has been done",
+            "image":"log.jpg",
+			"altText":"Image of a notebook",
+        },
+		{
+            "id":"Make_some_hot_drinks",
+			"numberInArray":13,
+			"title":"Make some hot drinks",
+            "paragraph1":"This will help calm the group and the casualty down while waiting for help",
+            "image":"makeSomeHot.jpg",
+			"altText":"Image of a trangia",
+        }
+
+    ]
+}
+	
+	
+	$(document).ready(function(){
+		
+		var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+		
+		
+		function shuffle(array) {
+  				var currentIndex = array.length, temporaryValue, randomIndex;
+
+				  // While there remain elements to shuffle...
+				  while (0 !== currentIndex) {
+
+						// Pick a remaining element...
+						randomIndex = Math.floor(Math.random() * currentIndex);
+						currentIndex -= 1;
+
+						// And swap it with the current element.
+						temporaryValue = array[currentIndex];
+						array[currentIndex] = array[randomIndex];
+						array[randomIndex] = temporaryValue;
+				  }
+
+  			return array;
+			}
+		
+		var shuffeldNumbers = shuffle(numbers);
+		
+		
+		printArticle(shuffeldNumbers);
+		
+		
+		
+		function printArticle(shuffeldNumbers){
+			
+		
+			var output="";
+			output+="<div class='smallArticleDiv'>";
+			output+="<div class='textInVisible'>"
+			output+="<h1 class='title'> Drag to reorder steps to be taken in an emergency. </h1>";
+			output+="</div>";
+			output+="</div>";
+			output+="<ul id=sortable>"
+			// loop through the articles array in the json and create each article in html
+			for (var currentStep=0; currentStep<13 ; currentStep++)
+				{
+					var numberToPrint = shuffeldNumbers[currentStep];
+					
+					output+="<li id='"+data.steps[numberToPrint].id+"'>"
+					output+="<div class='smallArticleDiv' id='"+data.steps[numberToPrint].id+"'>";
+					output+="<div class='mainPageIMGDIV'>"
+					output+="<img class='mainPageIMG' src='"+data.steps[numberToPrint].image+"'>";
+					output+="</div>";
+					output+="<div class='textInVisible'>"
+					output+="<h2 class='title'>"+data.steps[numberToPrint].title+"</h2>";
+					output+="<p class='paragraph1'>"+data.steps[numberToPrint].paragraph1+"</p>";
+					output+="</div></div>"
+					output+="</li>"
+				}
+			output+="</ul>"
+			//add the output to displayall div
+			$("#displayAll").append(output);
+			//call to function that sets up the sortable funcitonality
+			getSortableReady();
+		}
+
+		
+		function getSortableReady(){
+			//remove the next and previous buttons and add a title and new submit button
+			$("#BTNStitle").append("Current ranking:");
+			var newBTN = "<button type='submit' class='BTNS' id='submitBTN' form='ratingForm'>Submit Rating</button>";
+			$("#BTNDIV").append(newBTN);
+			//make the articles sortable and call a function everytime the user updates the order
+			$("#sortable").sortable({
+				update: function(event, ui) {
+					getRating();}
+			});
+			$("#sortable" ).disableSelection();
+			//get the initial rating 
+			getRating();
+			
+		}
+		
+		function getRating(){
+			$("#myRatingText").empty();
+			// get the order of the articles
+			var divOrder = $('#sortable').sortable("toArray");
+			var orderDisply="";
+			var listNum = 0;
+			for(i in divOrder){
+				listNum++;
+				// add the article names
+				orderDisply+="<div class='articleInRating'><h4>"+listNum+". ";
+				if(divOrder[i]=="First_aid"){
+					orderDisply+="Start first aid";
+				}else if(divOrder[i]=="Work_out_where_you_are"){
+					orderDisply+="Work out where you are";
+				}else if(divOrder[i]=="Phone_emergency_services"){
+					orderDisply+="Phone emergency services";
+				}else if(divOrder[i]=="Call_and_text_supervisor"){
+					orderDisply+="Call and text supervisor";
+				}else if(divOrder[i]=="Shout_for_help"){
+					orderDisply+="Shout for help";
+				}else if(divOrder[i]=="Get_csualty_in_a_survival_bag"){
+					orderDisply+="Get csualty in a survival bag";
+				}else if(divOrder[i]=="Write_down_your_location_and_casualty_details"){
+					orderDisply+="Write down your location and casualty details";
+				}else if(divOrder[i]=="Write_down_where_people_are_going_for_help"){
+					orderDisply+="Write down where people are going for help";
+				}else if(divOrder[i]=="Send_two_people_out_to_get_help"){
+					orderDisply+="Send two people out to get help";
+				}else if(divOrder[i]=="Set_up_a_location_marker"){
+					orderDisply+="Set up a location marker";
+				}else if(divOrder[i]=="Make_sure_all_group_members_are_wearing_dry_and_warm_clothing"){
+					orderDisply+="Wear dry and warm cloths";
+				}else if(divOrder[i]=="Put_up_a_tent"){
+					orderDisply+="Put up a tent";
+				}else if(divOrder[i]=="Start_a_log_of_events"){
+					orderDisply+="Start a log of events";
+				}else if(divOrder[i]=="Make_some_hot_drinks"){
+					orderDisply+="Make some hot drinks";
+				}
+				
+				orderDisply+="</h4></div>";
+				// hidden var containing the articles id - when we post these vars will be posted to server so we can later see the users rating
+				orderDisply+="<input type='hidden' name='number"+listNum+"' value="+divOrder[i]+">"
+				
+			}
+			$("#myRatingText").append(orderDisply);
+		}		
+		
+  });
+	
+	</script>
+</body>
+</html>
